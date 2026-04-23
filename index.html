@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>採用情報</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="bg-blob bg-blob-1"></div>
+<div class="bg-blob bg-blob-2"></div>
+
+<!-- Top nav -->
+<nav class="top-nav">
+  <button class="nav-btn" onclick="scrollToCard('recruit')">
+    募集職種
+    <span class="chevron">›</span>
+  </button>
+  <button class="nav-btn" onclick="scrollToCard('casual')">
+    カジュアル面談
+    <span class="chevron">›</span>
+  </button>
+  <button class="nav-btn nav-btn-close" onclick="closeSection()">－</button>
+</nav>
+
+<!-- Main -->
+<div class="section">
+  <div class="cards-grid">
+
+    <!-- Card 1: 募集職種 -->
+    <div class="card" id="recruit" onclick="window.location='#recruit'">
+      <div class="blob blob-blue-small"></div>
+      <div class="blob blob-blue-large"></div>
+      <div class="blob blob-outline"></div>
+
+      <p class="card-label">Join Our Team</p>
+      <h2 class="card-title">募集職種</h2>
+
+      <div class="card-body">
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="80" cy="80" r="80" fill="#dbeafe"/>
+            <rect x="20" y="110" width="120" height="8" rx="4" fill="#93c5fd" opacity="0.5"/>
+            <rect x="45" y="85" width="70" height="44" rx="4" fill="#60a5fa" opacity="0.6"/>
+            <rect x="38" y="127" width="84" height="5" rx="2" fill="#3b82f6" opacity="0.5"/>
+            <circle cx="55" cy="70" r="14" fill="#bfdbfe"/>
+            <rect x="44" y="82" width="22" height="28" rx="8" fill="#93c5fd"/>
+            <circle cx="85" cy="65" r="16" fill="#bfdbfe"/>
+            <rect x="72" y="78" width="26" height="30" rx="8" fill="#60a5fa"/>
+            <circle cx="115" cy="72" r="13" fill="#bfdbfe"/>
+            <rect x="104" y="83" width="22" height="27" rx="8" fill="#93c5fd"/>
+          </svg>
+        </div>
+        <p class="card-text">
+          現在募集中の職種一覧をご確認いただけます。ご自身の経験や関心に合致するポジションがございましたら、応募をご検討ください。
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 2: カジュアル面談 -->
+    <div class="card" id="casual" onclick="window.location='#casual'">
+      <div class="blob blob-blue-small"></div>
+      <div class="blob blob-blue-large"></div>
+      <div class="blob blob-outline"></div>
+
+      <p class="card-label">Casual Interview</p>
+      <h2 class="card-title">カジュアル面談</h2>
+
+      <div class="card-body">
+        <div class="photo-placeholder">
+          <svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="80" cy="80" r="80" fill="#dbeafe"/>
+            <rect x="15" y="100" width="130" height="6" rx="3" fill="#93c5fd" opacity="0.5"/>
+            <rect x="50" y="65" width="65" height="44" rx="5" fill="#fff" opacity="0.8"/>
+            <rect x="58" y="73" width="45" height="3" rx="2" fill="#93c5fd"/>
+            <rect x="58" y="80" width="38" height="3" rx="2" fill="#93c5fd" opacity="0.6"/>
+            <rect x="58" y="87" width="42" height="3" rx="2" fill="#93c5fd" opacity="0.6"/>
+            <rect x="90" y="60" width="6" height="40" rx="3" fill="#3b82f6" transform="rotate(30 93 80)"/>
+            <circle cx="45" cy="72" r="22" fill="#bfdbfe" opacity="0.7"/>
+            <rect x="24" y="90" width="42" height="16" rx="8" fill="#93c5fd" opacity="0.6"/>
+          </svg>
+        </div>
+        <p class="card-text">
+          応募をご検討中の方に向けて、当社についてご理解を深めていただくためのカジュアル面談を実施<span class="card-link">しています。</span>
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
