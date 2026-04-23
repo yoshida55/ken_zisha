@@ -1,4 +1,50 @@
 /* ===========================
+   スクロール出現アニメーション
+   =========================== */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
+}
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition:
+    opacity 0.9s ease-out,
+    transform 0.9s ease-out;
+}
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+.reveal-delay-1 {
+  transition-delay: 0.15s;
+}
+.reveal-delay-2 {
+  transition-delay: 0.3s;
+}
+.reveal-delay-3 {
+  transition-delay: 0.45s;
+}
+
+/* ===========================
    リセット・基本設定
    =========================== */
 
@@ -93,7 +139,7 @@ a {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 10rem 2rem 6rem;
+  padding: 8rem 2rem 6rem;
   position: relative;
   overflow: hidden;
   max-width: 110rem;
@@ -119,7 +165,7 @@ a {
   font-family: var(--font-title);
   font-size: 5.5rem;
   font-weight: 600;
-  line-height: 1.6;
+  line-height: 1.7;
   letter-spacing: 0.05em;
   margin-bottom: 2rem;
   color: var(--text-primary);
@@ -479,7 +525,7 @@ body.loaded .marker {
   position: relative;
   overflow: hidden;
   height: auto;
-  min-height: 60rem;
+  min-height: 80rem;
 }
 
 .slider-left {
@@ -639,6 +685,141 @@ body.loaded .marker {
 }
 
 .btn-more:hover {
+  opacity: 0.85;
+}
+
+/* ┌─────────────────────────────────────────┐
+    │ セクション4: 会社について                       │
+    └─────────────────────────────────────────┘ */
+
+.about-section {
+  position: relative;
+  background: var(--bg);
+  min-height: 100vh;
+  padding: 6rem 6rem 8rem;
+  overflow: hidden;
+}
+
+.about-top {
+  margin-bottom: 4rem;
+}
+
+.about-label {
+  font-family: var(--font-title);
+  font-size: 0.8rem;
+  letter-spacing: 0.25em;
+  color: var(--accent);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.about-heading {
+  font-family: var(--font-title);
+  font-size: 5rem;
+  font-weight: 800;
+  line-height: 1;
+  color: var(--text-primary);
+}
+
+.about-inner {
+  display: flex;
+  gap: 4rem;
+  align-items: flex-start;
+}
+
+/* 3D図形エリア */
+.about-shapes {
+  flex-shrink: 0;
+  width: 36rem;
+  position: relative;
+  height: 44rem;
+}
+
+.about-tri {
+  position: absolute;
+  width: 0;
+  height: 0;
+  pointer-events: none;
+}
+
+.about-tri--1 {
+  border-left: 5rem solid transparent;
+  border-right: 5rem solid transparent;
+  border-bottom: 8.5rem solid var(--accent);
+  top: 2rem;
+  left: 4rem;
+  opacity: 0.9;
+}
+
+.about-tri--2 {
+  border-left: 7rem solid transparent;
+  border-right: 7rem solid transparent;
+  border-bottom: 12rem solid var(--accent);
+  bottom: 0;
+  right: 2rem;
+  opacity: 0.7;
+}
+
+.about-box {
+  position: absolute;
+  width: 22rem;
+  height: 22rem;
+  background: var(--accent);
+  bottom: 2rem;
+  left: 2rem;
+  transform: perspective(600px) rotateX(15deg) rotateY(-20deg);
+  box-shadow: 2rem 2rem 0 rgba(54, 77, 206, 0.3);
+}
+
+/* テキストエリア */
+.about-right {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.about-catch {
+  font-size: clamp(1.8rem, 3.2vw, 2.8rem);
+  font-weight: 700;
+  line-height: 1.8;
+  color: var(--text-primary);
+}
+
+.about-accent {
+  color: var(--accent);
+}
+
+.about-desc-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 2.5rem;
+}
+
+.about-desc {
+  font-size: 2rem;
+  line-height: 2.2;
+  color: var(--text-secondary);
+  text-align: left;
+  max-width: 48rem;
+  align-self: flex-end;
+}
+
+.about-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.4rem 3.2rem;
+  background: var(--accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: opacity 0.2s;
+  align-self: flex-end;
+}
+
+.about-btn:hover {
   opacity: 0.85;
 }
 

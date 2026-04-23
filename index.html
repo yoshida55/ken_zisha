@@ -6,6 +6,7 @@
     <title>株式会社〇〇 | 軽作業・IT・Web受注</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/work.css" />
@@ -51,16 +52,16 @@
     <!-- セクション2: 事業内容 -->
     <section class="service" id="service">
       <div class="service-inner">
-        <p class="section-label">Our Services</p>
-        <h2 class="section-title">事業内容</h2>
-        <p class="service-bg-text">SERVICES</p>
+        <p class="section-label" data-aos="fade">Our Services</p>
+        <h2 class="section-title" data-aos="fade" data-aos-delay="100">事業内容</h2>
+        <p class="service-bg-text" data-aos="fade" data-aos-delay="150">SERVICES</p>
 
         <!-- ジグザグ写真エリア -->
         <div class="service-zigzag">
-          <div class="zz-photo zz-photo--1"><img src="img/軽作業風景.png" alt="軽作業" /></div>
-          <div class="zz-photo zz-photo--2"><img src="img/軽作業風景_1.jpg" alt="軽作業2" /></div>
-          <div class="zz-photo zz-photo--3"><img src="img/IT作業風景.jpg" alt="IT作業" /></div>
-          <div class="zz-photo zz-photo--4"><img src="img/デスク風景.png" alt="デスク" /></div>
+          <div class="zz-photo zz-photo--1" data-aos="fade"><img src="img/軽作業風景.png" alt="軽作業" /></div>
+          <div class="zz-photo zz-photo--2" data-aos="fade" data-aos-delay="100"><img src="img/軽作業風景_1.jpg" alt="軽作業2" /></div>
+          <div class="zz-photo zz-photo--3" data-aos="fade" data-aos-delay="200"><img src="img/IT作業風景.jpg" alt="IT作業" /></div>
+          <div class="zz-photo zz-photo--4" data-aos="fade" data-aos-delay="300"><img src="img/デスク風景.png" alt="デスク" /></div>
         </div>
       </div>
     </section>
@@ -111,6 +112,38 @@
       </div>
     </section>
 
+    <!-- セクション4: 会社について -->
+    <section class="about-section" id="about-us">
+      <div class="about-top">
+        <p class="about-label" data-aos="fade">About us</p>
+        <h2 class="about-heading" data-aos="fade" data-aos-delay="100">私たちについて</h2>
+      </div>
+      <div class="about-inner">
+        <div class="about-shapes">
+          <div class="about-box"></div>
+          <div class="about-tri about-tri--2"></div>
+        </div>
+        <div class="about-right">
+          <p class="about-catch" data-aos="fade" data-aos-delay="150">
+            私たちは、<span class="about-accent">軽作業・データ入力・Web制作</span>など、<br />
+            幅広い業務を受託する<span class="about-accent">総合業務支援会社</span>です。
+          </p>
+          <div class="about-desc-wrap" data-aos="fade" data-aos-delay="250">
+            <p class="about-desc">
+              私たちが大切にしているのは、「誠実であること」と「品質を妥協しないこと」。
+              スタッフ一人ひとりがその想いを持ち、日々の業務に向き合っています。<br /><br />
+              軽作業から高度なITデジタル業務まで、幅広い対応力が私たちの強みです。
+              単発のご依頼はもちろん、継続的なパートナーとしてご活用いただけるよう、
+              柔軟な体制でお客様のビジネスを支えます。<br /><br />
+              まずはお気軽にご相談ください。最適なご提案をご用意いたします。
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>AOS.init({ duration: 1200, once: true });</script>
   </body>
 </html>

@@ -2,6 +2,18 @@ window.addEventListener('load', () => {
   document.body.classList.add('loaded');
 });
 
+// スクロール出現アニメーション
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      io.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
 // 自動無限スライダー
 const track = document.getElementById('sliderTrack');
 
