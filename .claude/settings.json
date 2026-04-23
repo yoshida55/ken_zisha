@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cp \"d:/02_作業/00_リンクワーク/HTML自動化/過去の課題２/60_自社HP/index.html\" \"d:/02_作業/00_リンクワーク/HTML自動化/過去の課題２/60_自社HP/index_backup.html\")",
+      "Bash(cp \"d:/02_作業/00_リンクワーク/HTML自動化/過去の課題２/60_自社HP/css/work.css\" \"d:/02_作業/00_リンクワーク/HTML自動化/過去の課題２/60_自社HP/css/work_backup.css\")"
+    ]
+  }
+}

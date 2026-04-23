@@ -3,62 +3,113 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>採用情報</title>
+    <title>株式会社〇〇 | 軽作業・IT・Web受注</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/work.css" />
   </head>
   <body>
-    <div class="bg-blob bg-blob-1"></div>
-    <div class="bg-blob bg-blob-2"></div>
+    <!-- ナビゲーション -->
+    <header class="header">
+      <div class="header-inner">
+        <a href="#" class="logo">COMPANY</a>
+        <nav class="nav">
+          <a href="#about" class="nav-link">私たちについて</a>
+          <a href="#service" class="nav-link">事業内容</a>
+          <a href="#contact" class="nav-link">お問い合わせ</a>
+        </nav>
+      </div>
+    </header>
 
-    <!-- Top nav -->
-    <nav class="top-nav">
-      <button class="nav-btn" onclick="scrollToCard('recruit')">
-        募集職種
-        <span class="chevron">›</span>
-      </button>
-      <button class="nav-btn" onclick="scrollToCard('casual')">
-        カジュアル面談
-        <span class="chevron">›</span>
-      </button>
-      <button class="nav-btn nav-btn-close" onclick="closeSection()">－</button>
-    </nav>
-
-    <!-- Main -->
-    <div class="section">
-      <div class="cards-grid">
-        <!-- Card 1: 募集職種 -->
-        <div class="card" id="recruit" onclick="window.location = '#recruit'">
-          <div class="blob blob-blue-small"></div>
-          <div class="blob blob-blue-large"></div>
-          <div class="blob blob-outline"></div>
-          <img class="blob blob-img" src="" alt="" />
-
-          <p class="card-label">Join Our Team</p>
-          <h2 class="card-title">募集職種</h2>
-
-          <div class="card-body">
-            <p class="card-text"> 現在募集中の職種一覧をご確認いただけます。ご自身の経験や関心に合致するポジションがございましたら、応募をご検討ください。 </p>
-          </div>
+    <!-- セクション1: ヒーロー -->
+    <section class="hero" id="about">
+      <div class="hero-inner">
+        <p class="hero-label">Business Support Partner</p>
+        <h1 class="hero-title">
+          <span class="marker marker--1">軽作業</span>から<br />
+          <span class="hero-accent marker marker--2">ITデジタル業務</span>まで、<br />
+          <span class="marker marker--3">貴社の業務を支えます</span>。
+        </h1>
+        <p class="hero-desc">
+          私たちは軽作業・データ入力・Web制作など、幅広い業務を受託します。<br />
+          品質と誠実さで、長期的なビジネスパートナーを目指しています。
+        </p>
+        <a href="#contact" class="btn-primary">お問い合わせ →</a>
+      </div>
+      <div class="hero-deco">
+        <div class="hero-photo hero-photo--1">
+          <img src="img/軽作業風景_1.jpg" alt="軽作業" />
         </div>
+        <div class="hero-photo hero-photo--2">
+          <img src="img/IT作業風景.jpg" alt="IT作業" />
+        </div>
+      </div>
+    </section>
 
-        <!-- Card 2: カジュアル面談 -->
-        <div class="card" id="casual" onclick="window.location = '#casual'">
-          <div class="blob blob-blue-small"></div>
-          <div class="blob blob-blue-large"></div>
-          <div class="blob blob-outline"></div>
-          <img class="blob blob-img" src="" alt="" />
+    <!-- セクション2: 事業内容 -->
+    <section class="service" id="service">
+      <div class="service-inner">
+        <p class="section-label">Our Services</p>
+        <h2 class="section-title">事業内容</h2>
+        <p class="service-bg-text">SERVICES</p>
 
-          <p class="card-label">Casual Interview</p>
-          <h2 class="card-title">カジュアル面談</h2>
+        <!-- ジグザグ写真エリア -->
+        <div class="service-zigzag">
+          <div class="zz-photo zz-photo--1"><img src="img/軽作業風景.png" alt="軽作業" /></div>
+          <div class="zz-photo zz-photo--2"><img src="img/軽作業風景_1.jpg" alt="軽作業2" /></div>
+          <div class="zz-photo zz-photo--3"><img src="img/IT作業風景.jpg" alt="IT作業" /></div>
+          <div class="zz-photo zz-photo--4"><img src="img/デスク風景.png" alt="デスク" /></div>
+        </div>
+      </div>
+    </section>
 
-          <div class="card-body">
-            <p class="card-text"> 応募をご検討中の方に向けて、当社についてご理解を深めていただくためのカジュアル面談を実施<span class="card-link">しています。</span> </p>
+    <!-- セクション3: スライダー -->
+    <section class="slider-section" id="business">
+      <div class="slider-left">
+        <p class="slider-label">作業風景</p>
+      </div>
+
+      <div class="slider-track-wrap">
+        <div class="slider-track" id="sliderTrack">
+          <!-- スライドカードエリア -->
+          <div class="slide-card">
+            <p class="slide-num">— Business 01</p>
+            <div class="slide-img-wrap">
+              <img src="img/軽作業風景.png" alt="軽作業" />
+            </div>
+            <p class="slide-name">軽<br />作<br />業</p>
+            <a href="#" class="slide-arrow">→</a>
+          </div>
+
+          <div class="slide-card">
+            <p class="slide-num">— Business 02</p>
+            <div class="slide-img-wrap">
+              <img src="img/IT作業風景.jpg" alt="IT作業" />
+            </div>
+            <p class="slide-name">I<br />T<br />業<br />務</p>
+            <a href="#" class="slide-arrow">→</a>
+          </div>
+
+          <div class="slide-card">
+            <p class="slide-num">— Business 03</p>
+            <div class="slide-img-wrap">
+              <img src="img/デスク風景.png" alt="Web制作" />
+            </div>
+            <p class="slide-name">W<br />e<br />b<br />制<br />作</p>
+            <a href="#" class="slide-arrow">→</a>
+          </div>
+
+          <div class="slide-card">
+            <p class="slide-num">— Business 04</p>
+            <div class="slide-img-wrap">
+              <img src="img/軽作業風景_1.jpg" alt="データ入力" />
+            </div>
+            <p class="slide-name">デ<br />ー<br />タ<br />入<br />力</p>
+            <a href="#" class="slide-arrow">→</a>
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <script src="script.js"></script>
   </body>

@@ -1,3 +1,34 @@
+window.addEventListener('load', () => {
+  document.body.classList.add('loaded');
+});
+
+// 自動無限スライダー
+const track = document.getElementById('sliderTrack');
+
+if (track) {
+  const cards = Array.from(track.querySelectorAll('.slide-card'));
+  cards.forEach(card => track.appendChild(card.cloneNode(true)));
+
+  let pos = 0;
+  let paused = false;
+  const speed = 0.6;
+  const totalWidth = cards.length * (420 + 4);
+
+  function autoSlide() {
+    if (!paused) {
+      pos -= speed;
+      if (Math.abs(pos) >= totalWidth) pos = 0;
+      track.style.transform = `translateX(${pos}px)`;
+    }
+    requestAnimationFrame(autoSlide);
+  }
+
+  autoSlide();
+
+  track.addEventListener('mouseenter', () => { paused = true; });
+  track.addEventListener('mouseleave', () => { paused = false; });
+}
+
 function scrollToCard(id) {
   const card = document.getElementById(id);
   card.scrollIntoView({ behavior: 'smooth', block: 'center' });
