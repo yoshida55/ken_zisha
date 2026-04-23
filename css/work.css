@@ -1,0 +1,232 @@
+body {
+  font-family: "Noto Sans JP", "Hiragino Kaku Gothic ProN", sans-serif;
+  background: #f0f4ff;
+  min-height: 100vh;
+}
+
+:root {
+  --title-size: 2rem;
+  --section-label: 1.4rem;
+  --description: 1.1rem;
+}
+
+/* Top nav buttons */
+.top-nav {
+  position: fixed;
+  top: 1.6rem;
+  right: 1.6rem;
+  display: flex;
+  gap: 0.8rem;
+  z-index: 100;
+}
+
+.nav-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  padding: 1rem 2rem;
+  font-size: 1.4rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background 0.2s,
+    transform 0.15s;
+  white-space: nowrap;
+}
+.nav-btn:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+}
+
+.nav-btn .chevron {
+  width: 1.8rem;
+  height: 1.8rem;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+.nav-btn-close {
+  width: 4rem;
+  height: 4rem;
+  padding: 0;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+/* Main section */
+.section {
+  padding: 25rem 4rem 6rem;
+  max-width: 100rem;
+  margin: 0 auto;
+}
+
+/* Card全体（グリッドで２列に分ける） 　左右あり*/
+.cards-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2.4rem;
+}
+
+/* Card全体 　左右あり*/
+.card {
+  background: #fff;
+  padding: 3.6rem 3.2rem 3.2rem;
+  position: relative;
+  overflow: hidden;
+  min-height: 30rem;
+  cursor: pointer;
+  transition:
+    box-shadow 0.2s,
+    transform 0.2s;
+  box-shadow: 0 2px 12px rgba(37, 99, 235, 0.07);
+}
+.card:hover {
+  box-shadow: 0 8px 32px rgba(37, 99, 235, 0.13);
+  transform: translateY(-3px);
+}
+
+/* セクションラベル */
+.card-label {
+  font-size: var(--section-label);
+  color: #60a5fa;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.8rem;
+}
+
+/* 募集職種のカード */
+.card-title {
+  font-size: var(--title-size);
+  font-weight: 700;
+  color: #1a1a2e;
+  letter-spacing: -0.01em;
+  margin-bottom: 5rem;
+}
+
+/* カードの説明・詳細 */
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+/* カードの説明・テキスト */
+.card-text {
+  font-size: var(--description);
+  line-height: 1.8;
+  color: #444;
+  text-align: center;
+  width: 100%;
+}
+
+/* 詳細の〇 */
+.blob {
+  position: absolute;
+  border-radius: 60%;
+  pointer-events: none;
+}
+
+.blob-blue-small {
+  width: 6rem;
+  height: 4rem;
+  background: #2563eb;
+  border-radius: 50%;
+  top: 5.5rem;
+  right: 1rem;
+  opacity: 0.95;
+  transform: rotate(-35deg);
+  z-index: 2;
+}
+
+.blob-blue-large {
+  width: 6rem;
+  height: 5rem;
+  background: #bfdbfe;
+  border-radius: 50%;
+  top: 2rem;
+  right: 3rem;
+  opacity: 0.85;
+  transform: rotate(-35deg);
+  z-index: 1;
+}
+
+/* 一番下の〇 */
+.blob-outline {
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 2.5px solid #93c5fd;
+  border-radius: 50%;
+  bottom: 2rem;
+  left: 40%;
+  z-index: 1;
+  background: transparent;
+}
+
+/* 写真 */
+.blob-img {
+  width: 6rem;
+  height: 5rem;
+  background: #bfdbfe;
+  border-radius: 50%;
+  top: 2rem;
+  right: 3rem;
+  opacity: 0.85;
+  transform: rotate(-35deg);
+  z-index: 1;
+}
+
+/* 右側まるカスタマイズ用 */
+.card:nth-child(2) .blob-blue-large {
+  width: 8.5rem;
+  height: 11rem;
+  top: 7rem;
+  right: 5rem;
+}
+.card:nth-child(2) .blob-blue-small {
+  width: 5rem;
+  height: 6.5rem;
+  top: 10rem;
+  right: 10.5rem;
+  background: #bfdbfe;
+}
+
+/* link text */
+.card-link {
+  color: #2563eb;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+/* Background blobs */
+.bg-blob {
+  position: fixed;
+  border-radius: 50%;
+  background: rgba(147, 197, 253, 0.35);
+  pointer-events: none;
+}
+.bg-blob-1 {
+  width: 30rem;
+  height: 30rem;
+  top: -8rem;
+  left: -8rem;
+  border-radius: 50%;
+}
+.bg-blob-2 {
+  width: 22rem;
+  height: 22rem;
+  bottom: 2rem;
+  right: 2rem;
+  border-radius: 50%;
+}

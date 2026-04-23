@@ -1,0 +1,245 @@
+/*
+Theme Name: 
+*/
+
+html {
+  font-size: calc(10 / 1280 * 100vw);
+  /* 画面幅1280pxで10px*/
+}
+
+img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.sp_only {
+  display: none;
+}
+/* <!-- メインビジュアルここから --> */
+.ar_main_img {
+  height: 37rem;
+  object-fit: cover;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ サイト共通部分                        │
+   └─────────────────────────────────────────┘ */
+:root {
+  --side-width: 22rem;
+  --font-size-base: 1.4rem;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* 画面の高さいっぱいに広げる */
+}
+
+.main {
+  flex: 1;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ ヘッダー                                │
+   └─────────────────────────────────────────┘ */
+
+.header {
+  display: flex;
+  height: 27rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--side-width);
+}
+
+/* └ ロゴ（左） */
+.header_logo {
+  width: 12rem;
+  height: 2.7rem;
+  object-fit: cover;
+}
+
+/* └ ナビ（右） */
+.header_nav {
+}
+
+.nav_list {
+  display: flex;
+  gap: 3.3rem;
+  align-items: center;
+}
+
+/* └ ナビアイテム */
+.nav_item {
+}
+
+/* ナビリンク */
+.nav_link {
+  color: #24292e;
+  font-size: 1.44rem;
+  font-family: Meiryo;
+  letter-spacing: 0;
+  line-height: 1.18;
+}
+
+/* Instagramアイコン */
+.nav_img {
+  width: 2rem;
+  height: 2rem;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ メイン                                  │
+   └─────────────────────────────────────────┘ */
+
+/* メインビジュアル */
+.mv {
+  object-fit: cover;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ about                        │
+   └─────────────────────────────────────────┘ */
+
+/* aboutエリア */
+.about_area {
+  padding: 0 var(--side-width);
+  margin-bottom: 10rem;
+}
+
+/* aboutタイトル */
+.about_title {
+  font-size: 3rem;
+  text-align: center;
+  padding-top: 10rem;
+  height: 20rem;
+}
+.about_name {
+  margin-bottom: 3rem;
+  font-size: var(--font-size-base);
+}
+.about_info {
+  font-size: var(--font-size-base);
+  margin-bottom: 3rem;
+}
+
+.about_description {
+  font-size: var(--font-size-base);
+}
+
+@media screen and (max-width: 699.98px) {
+  html {
+    font-size: calc(10 / 375 * 100vw);
+    /* 画面幅375pxで10px*/
+  }
+  /* <!-- メインビジュアルここから --> */
+  .ar_main_img {
+    margin-top: 8rem;
+    height: 15rem;
+  }
+  /* <!-- メインビジュアルここまで --> */
+  .sp_only {
+    display: block;
+  }
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ news                        │
+   └─────────────────────────────────────────┘ */
+
+/* newsエリア */
+.news_area {
+  padding: 0 var(--side-width);
+  margin-bottom: 10rem;
+}
+
+/* newsタイトル */
+.news_title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.news_item {
+  border-bottom: 0.1rem solid gray;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5rem;
+
+  padding: 2rem 2rem 2rem 0;
+}
+
+.news_item:first-child {
+  border-top: 0.1rem solid grey;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ Contact                        │
+   └─────────────────────────────────────────┘ */
+
+.contact_area {
+  padding: 0 var(--side-width);
+  margin-bottom: 10rem;
+}
+
+.contact_title {
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+/* お問い合わせフォーム　　 */
+.contact_form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact_list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.contact_label {
+  width: 10%;
+  font-size: 1.4rem;
+}
+
+.contact_input {
+  width: 80%;
+}
+
+#contact input,
+#contact textarea {
+  padding: 0.5rem;
+  border: 0.1rem solid black;
+}
+
+/* 送信ボタン */
+#contact input[type="submit"] {
+  display: block;
+  width: 10rem;
+  height: 3rem;
+
+  color: white;
+  font-size: var(--font-size-base);
+  background-color: #24292e;
+  border: 0.1rem solid black;
+  cursor: pointer;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ┌─────────────────────────────────────────┐
+   │ footer                        │
+   └─────────────────────────────────────────┘ */
+
+/* フッター */
+footer {
+  background: black;
+  color: rgba(255, 255, 255, 0.7);
+  padding: 3.5rem 2rem;
+  text-align: center;
+}
