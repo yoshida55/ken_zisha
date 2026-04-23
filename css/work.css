@@ -11,7 +11,7 @@
 }
 
 :root {
-  --bg: #c8cfde;
+  --bg: #fafaf7;
   --bg-card: #ffffff;
   --bg-card-hover: #eef1f8;
   --border: rgba(0, 0, 0, 0.08);
@@ -48,7 +48,7 @@ a {
   width: 100%;
   z-index: 100;
   border-bottom: 1px solid var(--border);
-  background: rgba(200, 207, 222, 0.92);
+  background: var(--bg);
   backdrop-filter: blur(12px);
 }
 
@@ -258,7 +258,7 @@ body.loaded .marker {
     └─────────────────────────────────────────┘ */
 
 .service {
-  padding: 5rem 2rem 6rem;
+  padding: 10rem 2rem 17rem;
   max-width: 110rem;
 
   margin: 0 auto;
@@ -309,8 +309,8 @@ body.loaded .marker {
 
 /* 事業内容 */
 .section-title {
-  font-size: clamp(2.2rem, 4vw, 3.4rem);
-  font-weight: 700;
+  font-size: 4rem;
+  font-weight: 800;
   margin-bottom: 2rem;
   letter-spacing: -0.01em;
   color: var(--accent);
@@ -473,12 +473,13 @@ body.loaded .marker {
    └─────────────────────────────────────────┘ */
 
 .slider-section {
-  padding: 5rem 2rem 4rem;
+  padding: 7rem 2rem 10rem;
 
   background: var(--work-bg-color);
   position: relative;
   overflow: hidden;
-  height: 60rem;
+  height: auto;
+  min-height: 60rem;
 }
 
 .slider-left {
@@ -494,11 +495,13 @@ body.loaded .marker {
 /* 作業風景 */
 .slider-label {
   font-family: var(--font-title);
+  font-size: 4rem;
   font-size: clamp(2.2rem, 4vw, 3.4rem);
   font-weight: 700;
   color: white;
   letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
+  margin-left: 8rem;
   position: relative;
 }
 
@@ -506,9 +509,9 @@ body.loaded .marker {
   content: "";
 
   position: absolute;
-  top: -0.5rem;
+  top: -3rem;
   left: 0.5rem;
-  width: 30rem;
+  width: 40rem;
   height: 0.1rem;
   color: white;
   border-top: 0.1rem solid white;
