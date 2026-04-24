@@ -2,6 +2,17 @@ window.addEventListener('load', () => {
   document.body.classList.add('loaded');
 });
 
+// FV背景スライドショー（クロスフェード）
+const fvSlides = document.querySelectorAll('.fv-bg-slide');
+if (fvSlides.length > 0) {
+  let current = 0;
+  setInterval(() => {
+    fvSlides[current].classList.remove('is-active');
+    current = (current + 1) % fvSlides.length;
+    fvSlides[current].classList.add('is-active');
+  }, 3000);
+}
+
 // スクロール出現アニメーション
 const io = new IntersectionObserver((entries) => {
   entries.forEach(entry => {

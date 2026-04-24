@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>サービスセクション サンプル</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Noto Sans JP", sans-serif;
+      background: #fafaf7;
+      color: #1a1a2e;
+    }
+
+    /* ===== セクション全体 ===== */
+    .service {
+      padding: 9rem 4rem 10rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .service-label {
+      font-family: "Inter", sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.22em;
+      color: #364dce;
+      text-transform: uppercase;
+      margin-bottom: 0.8rem;
+    }
+
+    .service-title {
+      font-family: "Shippori Mincho", serif;
+      font-size: 3rem;
+      font-weight: 600;
+      color: #1a1a2e;
+      margin-bottom: 1rem;
+    }
+
+    .service-desc {
+      font-size: 1rem;
+      color: #666;
+      line-height: 1.9;
+      max-width: 540px;
+      margin-bottom: 5rem;
+    }
+
+    /* ===== カードグリッド ===== */
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.4rem;
+    }
+
+    .service-card {
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .service-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.12);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 240px;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* 画像がない場合のプレースホルダー */
+    .card-img-placeholder {
+      width: 100%;
+      height: 240px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 4rem;
+    }
+
+    .card-img-placeholder--light { background: #e8f0fe; }
+    .card-img-placeholder--green { background: #e6f4ea; }
+    .card-img-placeholder--warm  { background: #fff3e0; }
+    .card-img-placeholder--blue  { background: #e3f2fd; }
+
+    .card-body {
+      padding: 2rem 2.4rem 2.4rem;
+    }
+
+    .card-tag {
+      display: inline-block;
+      font-family: "Inter", sans-serif;
+      font-size: 0.7rem;
+      letter-spacing: 0.15em;
+      color: #364dce;
+      text-transform: uppercase;
+      background: rgba(54,77,206,0.08);
+      padding: 0.3rem 0.8rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .card-title {
+      font-family: "Shippori Mincho", serif;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 0.8rem;
+      color: #1a1a2e;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #666;
+      line-height: 1.85;
+      margin-bottom: 1.4rem;
+    }
+
+    .card-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .card-list li {
+      font-size: 0.8rem;
+      color: #444;
+      background: #f3f4f8;
+      padding: 0.3rem 0.8rem;
+      border-radius: 4px;
+    }
+
+    /* ===== 下部CTA ===== */
+    .service-cta {
+      margin-top: 5rem;
+      text-align: center;
+    }
+
+    .service-cta p {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 1.6rem;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 1rem 3rem;
+      background: #364dce;
+      color: #fff;
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    .btn:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+
+<section class="service">
+
+  <p class="service-label">Our Services</p>
+  <h2 class="service-title">事業内容</h2>
+  <p class="service-desc">
+    軽作業からITデジタル業務まで、貴社の業務を幅広くサポートします。<br />
+    単発のご依頼から継続的なパートナーとして、柔軟に対応いたします。
+  </p>
+
+  <div class="service-grid">
+
+    <!-- カード1: 軽作業 -->
+    <div class="service-card">
+      <div class="card-img-placeholder card-img-placeholder--warm">📦</div>
+      <div class="card-body">
+        <span class="card-tag">Light Work</span>
+        <h3 class="card-title">軽作業</h3>
+        <p class="card-text">
+          梱包・仕分け・ラベル貼りなど、丁寧さと正確さが求められる作業を承ります。
+          大量ロットの依頼にも柔軟に対応可能です。
+        </p>
+        <ul class="card-list">
+          <li>梱包・箱詰め</li>
+          <li>仕分け・ピッキング</li>
+          <li>ラベル貼り</li>
+          <li>検品・数量確認</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- カード2: IT・デジタル業務 -->
+    <div class="service-card">
+      <div class="card-img-placeholder card-img-placeholder--light">💻</div>
+      <div class="card-body">
+        <span class="card-tag">IT / Digital</span>
+        <h3 class="card-title">ITデジタル業務</h3>
+        <p class="card-text">
+          データ入力・Excel集計・Web制作など、デジタル分野の業務をお任せください。
+          正確・迅速な処理でご支援します。
+        </p>
+        <ul class="card-list">
+          <li>データ入力</li>
+          <li>Excel・集計作業</li>
+          <li>Web制作・更新</li>
+          <li>資料作成・整理</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="service-cta">
+    <p>業務内容・費用についてはお気軽にご相談ください</p>
+    <a href="#" class="btn">お問い合わせ →</a>
+  </div>
+
+</section>
+
+</body>
+</html>

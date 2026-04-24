@@ -132,6 +132,148 @@ a {
 }
 
 /* ┌─────────────────────────────────────────┐
+   │ フルスクリーンヒーロー（新規）          │
+   └─────────────────────────────────────────┘ */
+
+.fv {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* 背景スライドショーラッパー */
+.fv-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.fv-bg-slide {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 1.4s ease;
+}
+
+.fv-bg-slide.is-active {
+  opacity: 1;
+}
+
+.fv-bg-slide--1 {
+  background-image: url("../img/女性の画像・メッセージ付き.webp");
+}
+
+.fv-bg-slide--2 {
+  background-image: url("../img/同じほうこうをむいているIT.png");
+}
+
+.fv-bg-slide--3 {
+  background-image: url("../img/軽作業風景_AI.png");
+}
+
+/* 左から右へ暗くなるオーバーレイ（テキスト読みやすく） */
+.fv::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 20, 50, 0.5) 0%, rgba(10, 20, 50, 0.3) 55%, rgba(10, 20, 50, 0.1) 100%);
+  z-index: 1;
+}
+
+@keyframes fv-zoom {
+  from {
+    transform: scale(1.08);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* 白波（FVの直後・FV画像の上に重ねる） */
+.fv-wave {
+  position: relative;
+  margin-top: -60px;
+  height: 60px;
+  background: var(--bg);
+  border-radius: 50% 50% 0 0 / 40% 40% 0 0;
+  z-index: 10;
+}
+
+.fv-inner {
+  position: relative;
+  z-index: 2;
+  padding: 12rem 8rem 8rem;
+  max-width: 80rem;
+}
+
+.fv-label {
+  font-family: var(--font-en);
+  font-size: 1rem;
+  letter-spacing: 0.22em;
+  color: rgba(255, 255, 255, 0.75);
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fv-slide-in 0.8s ease-out 0.2s forwards;
+}
+
+.fv-title {
+  font-family: var(--font-title);
+  font-size: 5.5rem;
+  font-weight: 600;
+  line-height: 1.75;
+  letter-spacing: 0.05em;
+  color: #fff;
+  margin-bottom: 2.4rem;
+}
+
+.fv-line {
+  display: block;
+  opacity: 0;
+  animation: fv-slide-in 0.8s ease-out forwards;
+}
+
+.fv-line--1 {
+  animation-delay: 0.5s;
+}
+.fv-line--2 {
+  animation-delay: 0.85s;
+}
+.fv-line--3 {
+  animation-delay: 1.2s;
+}
+
+@keyframes fv-slide-in {
+  from {
+    opacity: 0;
+    transform: translateX(-48px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fv-desc {
+  font-size: 1.05rem;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 2;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fv-slide-in 0.8s ease-out 1.6s forwards;
+}
+
+.fv-btn {
+  opacity: 0;
+  animation: fv-slide-in 0.8s ease-out 2s forwards;
+}
+
+/* ┌─────────────────────────────────────────┐
    │ メインビジュアル                        │
    └─────────────────────────────────────────┘ */
 
