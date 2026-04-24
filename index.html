@@ -3,159 +3,338 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>株式会社〇〇 | 軽作業・IT・Web受注</title>
+    <title>株式会社リンクワーク | 就労継続支援・軽作業・IT業務</title>
+    <meta name="description" content="軽作業やIT業務を通じて、一人ひとりの働く力を育てる就労継続支援事業所です。利用を考えている方にも、仕事を依頼したい企業にも、安心して相談いただける体制を大切にしています。" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Inter:wght@400;600;700&family=Shippori+Mincho:wght@400;600;700&display=swap" rel="stylesheet" />
-    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;800&family=Inter:wght@500;600;700&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/work.css" />
   </head>
-  <body>
-    <!-- ナビゲーション -->
+  <body class="home-page">
     <header class="header">
       <div class="header-inner">
-        <a href="#" class="logo">COMPANY</a>
-        <nav class="nav">
+        <a href="index.html" class="logo" aria-label="株式会社リンクワーク トップページ">LINKWORK</a>
+        <nav class="nav" aria-label="メインナビゲーション">
           <a href="#about" class="nav-link">私たちについて</a>
-          <a href="service.html" class="nav-link">事業内容</a>
-          <a href="#contact" class="nav-link">お問い合わせ</a>
+          <a href="#service" class="nav-link">仕事の内容</a>
+          <a href="#works" class="nav-link">作業風景</a>
+          <a href="#flow" class="nav-link">利用までの流れ</a>
+          <a href="#contact" class="nav-link nav-link--cta">お問い合わせ</a>
         </nav>
       </div>
     </header>
 
-    <!-- セクション0: フルスクリーンヒーロー（新規挿入） -->
-    <section class="fv">
-      <div class="fv-bg">
-        <div class="fv-bg-slide fv-bg-slide--1 is-active"></div>
-        <div class="fv-bg-slide fv-bg-slide--2"></div>
-        <div class="fv-bg-slide fv-bg-slide--3"></div>
-      </div>
-      <div class="fv-inner">
-        <p class="fv-label">Business Support Partner</p>
-        <h1 class="fv-title">
-          <span class="fv-line fv-line--1">軽作業から</span>
-          <span class="fv-line fv-line--2">ITデジタル業務まで、</span>
-          <span class="fv-line fv-line--3">貴社の業務を支えます。</span>
-        </h1>
-        <p class="fv-desc">
-          私たちは軽作業・データ入力・Web制作など、幅広い業務を受託します。<br />
-          品質と誠実さで、長期的なビジネスパートナーを目指しています。
-        </p>
-        <a href="#about" class="btn-primary fv-btn">詳しく見る →</a>
-      </div>
-    </section>
-
-    <!-- セクション2: 事業内容イントロ（左画像・右テキスト） -->
-    <section class="ab-section">
-      <div class="ab-image">
-        <img src="img/女性の就労支援員と就労者が相談している.png" alt="就労支援の様子" />
-      </div>
-      <div class="ab-content">
-        <p class="ab-label">#Business</p>
-        <h2 class="ab-heading">事業内容</h2>
-        <p class="ab-desc">
-          私たちは就労継続支援事業所として、障害のある方が<br />
-          自分らしく働けるよう、一人ひとりに寄り添った支援を行っています。<br /><br />
-          軽作業・データ入力・Web制作など、多様な業務を通じて<br />
-          スキルを身につけ、就職へつなげるサポートを提供しています。
-        </p>
-        <a href="service.html" class="btn-primary ab-btn">事業内容を詳しく見る →</a>
-      </div>
-    </section>
-
-    <!-- セクション3: 私たちについて -->
-    <section class="about-section" id="about-us">
-      <p class="about-bg-text">ABOUT US</p>
-      <div class="about-top">
-        <p class="about-label" data-aos="fade">About us</p>
-        <h2 class="about-heading" data-aos="fade" data-aos-delay="100">私たちについて</h2>
-      </div>
-      <div class="about-inner">
-        <div class="about-right">
-          <p class="about-catch" data-aos="fade" data-aos-delay="150">
-            私たちは、<span class="about-accent">軽作業・データ入力・Web制作</span>など、<br />
-            幅広い業務を受託する<span class="about-accent">総合業務支援会社</span>です。
+    <main>
+      <section class="home-hero">
+        <div class="home-hero__media" aria-hidden="true">
+          <div class="home-hero__slide home-hero__slide--1"></div>
+          <div class="home-hero__slide home-hero__slide--2"></div>
+          <div class="home-hero__slide home-hero__slide--3"></div>
+        </div>
+        <div class="home-hero__inner">
+          <p class="home-kicker">Work Support</p>
+          <h1 class="home-hero__title">
+            <span>一人ひとりの力を、</span>
+            <span><em class="home-marker">確かな仕事へ</em></span>
+            <span>つなげていく。</span>
+          </h1>
+          <p class="home-hero__text">
+            就労継続支援事業所として、軽作業やIT業務を通じて働く経験を積み重ねます。
+            企業からお預かりする仕事にも、丁寧さと責任を持って取り組んでいます。
           </p>
-          <div class="about-desc-wrap" data-aos="fade" data-aos-delay="250">
-            <p class="about-desc">
-              私たちが大切にしているのは、「誠実であること」と「品質を妥協しないこと」。
-              スタッフ一人ひとりがその想いを持ち、日々の業務に向き合っています。<br /><br />
-              軽作業から高度なITデジタル業務まで、幅広い対応力が私たちの強みです。
-              単発のご依頼はもちろん、継続的なパートナーとしてご活用いただけるよう、
-              柔軟な体制でお客様のビジネスを支えます。<br /><br />
-              まずはお気軽にご相談ください。最適なご提案をご用意いたします。
+          <div class="home-hero__actions">
+            <a href="#contact" class="home-button home-button--primary">見学について相談する</a>
+            <a href="#service" class="home-button home-button--ghost">どんな仕事があるか見る</a>
+          </div>
+        </div>
+        <div class="home-hero__panel home-hero__panel--two" aria-label="対応業務">
+          <div>
+            <strong>01</strong>
+            <span>軽作業</span>
+            <small>自分のペースで取り組める仕事</small>
+          </div>
+          <div>
+            <strong>02</strong>
+            <span>IT業務</span>
+            <small>得意や関心を広げる仕事</small>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-paths" aria-labelledby="paths-title">
+        <div class="home-paths__inner">
+          <div class="home-paths__head">
+            <p class="home-kicker">Guide</p>
+            <h2 id="paths-title">知りたい内容に合わせて、ご覧ください。</h2>
+            <p>
+              利用を考えている方にも、仕事を依頼したい企業の方にも、
+              必要な情報へ進みやすいよう入口を分けています。
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- セクション4: 事業内容（写真ジグザグ） -->
-    <section class="service" id="service">
-      <div class="service-inner">
-        <p class="section-label" data-aos="fade">Our Services</p>
-        <h2 class="section-title" data-aos="fade" data-aos-delay="100">事業内容</h2>
-        <p class="service-bg-text" data-aos="fade" data-aos-delay="150">SERVICES</p>
-
-        <!-- ジグザグ写真エリア -->
-        <div class="service-zigzag">
-          <div class="zz-photo zz-photo--1" data-aos="fade"><img src="img/軽作業風景.png" alt="軽作業" /></div>
-          <div class="zz-photo zz-photo--2" data-aos="fade" data-aos-delay="100"><img src="img/軽作業風景_1.jpg" alt="軽作業2" /></div>
-          <div class="zz-photo zz-photo--3" data-aos="fade" data-aos-delay="200"><img src="img/IT作業風景.jpg" alt="IT作業" /></div>
-          <div class="zz-photo zz-photo--4" data-aos="fade" data-aos-delay="300"><img src="img/デスク風景.png" alt="デスク" /></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- セクション3: スライダー -->
-    <section class="slider-section" id="business">
-      <div class="slider-left"> <p class="slider-label">作業風景</p> </div>
-
-      <div class="slider-track-wrap">
-        <div class="slider-track" id="sliderTrack">
-          <!-- スライドカードエリア -->
-          <div class="slide-card">
-            <p class="slide-num">— Business 01</p>
-            <div class="slide-img-wrap">
-              <img src="img/軽作業風景.png" alt="軽作業" />
-            </div>
-            <p class="slide-name">軽<br />作<br />業</p>
-            <a href="#" class="slide-arrow">→</a>
-          </div>
-
-          <div class="slide-card">
-            <p class="slide-num">— Business 02</p>
-            <div class="slide-img-wrap">
-              <img src="img/同じほうこうをむいているIT.png" alt="IT作業" />
-            </div>
-            <p class="slide-name">I<br />T<br />業<br />務</p>
-            <a href="#" class="slide-arrow">→</a>
-          </div>
-
-          <div class="slide-card">
-            <p class="slide-num">— Business 03</p>
-            <div class="slide-img-wrap">
-              <img src="img/デスク風景.png" alt="Web制作" />
-            </div>
-            <p class="slide-name">W<br />e<br />b<br />制<br />作</p>
-            <a href="#" class="slide-arrow">→</a>
-          </div>
-
-          <div class="slide-card">
-            <p class="slide-num">— Business 04</p>
-            <div class="slide-img-wrap">
-              <img src="img/軽作業風景_1.jpg" alt="データ入力" />
-            </div>
-            <p class="slide-name">デ<br />ー<br />タ<br />入<br />力</p>
-            <a href="#" class="slide-arrow">→</a>
+          <div class="home-paths__grid">
+            <a class="home-path-card" href="#flow">
+              <span class="home-path-card__label">利用する方へ</span>
+              <h3>利用を考えている方へ</h3>
+              <p>見学・体験、利用までの流れ、作業内容についてご相談いただけます。</p>
+              <small>利用までの流れへ <i aria-hidden="true">→</i></small>
+            </a>
+            <a class="home-path-card home-path-card--business" href="service.html">
+              <span class="home-path-card__label">企業の方へ</span>
+              <h3>企業の方へ</h3>
+              <p>依頼できる業務、作業体制、軽作業・IT業務の対応内容をご覧いただけます。</p>
+              <small>事業内容へ <i aria-hidden="true">→</i></small>
+            </a>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <section class="home-section home-about" id="about">
+        <div class="home-about__grid">
+          <div class="home-about__image js-soft-reveal">
+            <img src="img/女性の就労支援員と就労者が相談している.png" alt="スタッフが相談しながら業務を進めている様子" />
+            <div class="home-about__badge">
+              <span>Work Support</span>
+              <b>軽作業 / IT業務 / 働く経験</b>
+            </div>
+          </div>
+          <div class="home-about__body">
+            <p class="home-kicker js-soft-reveal">About us</p>
+            <h2 class="js-soft-reveal">安心して働ける場所から、丁寧な仕事を届ける。</h2>
+            <p class="js-soft-reveal">
+              私たちは、軽作業・IT業務を通じて、一人ひとりが自分のペースで働く経験を重ねられる就労継続支援事業所です。
+              作業の内容や得意なことを確認しながら、無理のない形で仕事に取り組みます。
+            </p>
+            <p class="js-soft-reveal">
+              同時に、企業からお預かりする業務にも誠実に向き合い、
+              丁寧な作業、確認しやすい進行、継続しやすい関係づくりを大切にしています。
+            </p>
+            <div class="home-about__cards" aria-label="私たちの2つの側面">
+              <article class="js-soft-reveal">
+                <span>利用を考えている方へ</span>
+                <strong>安心して経験を重ねる</strong>
+                <p>一人ひとりの得意やペースを大切にしながら、仕事につながる経験を積み重ねます。</p>
+              </article>
+              <article class="js-soft-reveal">
+                <span>仕事を依頼したい企業へ</span>
+                <strong>丁寧に仕事を届ける</strong>
+                <p>確認や報告を大切にし、企業からお預かりした業務に責任を持って取り組みます。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-services" id="service">
+        <div class="home-section__head home-section__head--split">
+          <div>
+            <p class="home-kicker">Services</p>
+            <h2>働く経験につながる、2つの仕事。</h2>
+          </div>
+          <a href="service.html" class="home-text-link">詳しい事業内容へ</a>
+        </div>
+        <div class="home-service-columns">
+          <article class="home-service-feature">
+            <div class="home-service-feature__image">
+              <img src="img/軽作業風景_1.jpg" alt="軽作業をしている様子" />
+            </div>
+            <div class="home-service-feature__body">
+              <span>01</span>
+              <h3>軽作業</h3>
+              <p>封入、検品、仕分け、梱包など、手を動かしながら取り組める仕事です。確認を重ねながら、一つひとつ丁寧に進めます。</p>
+              <p class="home-service-feature__note">小ロットのご相談や、継続的な作業にも内容に合わせて対応します。</p>
+              <ul class="home-service-tags" aria-label="軽作業の対応内容">
+                <li>封入</li>
+                <li>検品</li>
+                <li>仕分け</li>
+                <li>梱包</li>
+                <li>組み立て</li>
+              </ul>
+            </div>
+          </article>
+          <article class="home-service-feature home-service-feature--warm">
+            <div class="home-service-feature__image">
+              <img src="img/同じほうこうをむいているIT.png" alt="IT業務に取り組む様子" />
+            </div>
+            <div class="home-service-feature__body">
+              <span>02</span>
+              <h3>IT業務</h3>
+              <p>Web制作、ページ更新、データ入力、画像整理など、パソコンを使った仕事です。得意や関心に合わせて、少しずつ経験を広げていきます。</p>
+              <p class="home-service-feature__note">作業手順を確認しながら、日々の更新作業や運用補助もご相談いただけます。</p>
+              <ul class="home-service-tags" aria-label="IT業務の対応内容">
+                <li>Web制作</li>
+                <li>更新作業</li>
+                <li>データ入力</li>
+                <li>画像整理</li>
+                <li>運用補助</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+        <div class="home-service-note" aria-label="対応形式">
+          <span>見学・相談</span>
+          <span>軽作業</span>
+          <span>IT業務</span>
+          <span>企業からのご依頼</span>
+        </div>
+      </section>
+
+      <section class="home-work" id="works">
+        <div class="home-work__inner">
+          <div class="home-work__text">
+            <p class="home-kicker">Work Scene</p>
+            <h2>安心して取り組める環境で、仕事に向き合っています。</h2>
+            <p>
+              スタッフがそばで確認しながら、軽作業やIT業務に取り組める環境を整えています。
+              働く人にとっての安心感と、企業にとっての任せやすさの両方を大切にしています。
+            </p>
+            <div class="home-work__points" aria-label="作業体制の特徴">
+              <article>
+                <span>Support</span>
+                <strong>そばで確認できる体制</strong>
+                <p>困ったときに相談しやすく、作業内容を確認しながら進められます。</p>
+              </article>
+              <article>
+                <span>Work</span>
+                <strong>実際の仕事に取り組む</strong>
+                <p>軽作業やIT業務を通じて、働く経験を少しずつ積み重ねます。</p>
+              </article>
+              <article>
+                <span>Quality</span>
+                <strong>丁寧さを大切にする</strong>
+                <p>企業からお預かりした仕事にも、確認と報告を大切にして取り組みます。</p>
+              </article>
+            </div>
+          </div>
+          <div class="home-work__gallery">
+            <figure>
+              <video autoplay muted loop playsinline poster="img/同じ方向をむいて作業している（席がまばら）.png" aria-label="オフィスで相談している様子の動画">
+                <source src="img/オフィスで話あっている動画.mp4" type="video/mp4" />
+              </video>
+            </figure>
+            <figure>
+              <img src="img/軽作業風景_1.jpg" alt="軽作業をしている様子" />
+            </figure>
+            <figure>
+              <img src="img/デスク風景.png" alt="デスクで作業している様子" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="home-section home-flow" id="flow">
+        <div class="home-section__head">
+          <p class="home-kicker">Flow</p>
+          <h2>相談から利用開始まで、無理なく進めます。</h2>
+          <p class="home-section__lead">
+            はじめての方でも安心して相談できるよう、見学や体験の時間を大切にしています。
+            作業内容や通い方を一緒に確認しながら、自分に合った働き方を探していきます。
+          </p>
+        </div>
+        <div class="home-flow__timeline">
+          <article>
+            <b>01</b>
+            <div>
+              <h3>お問い合わせ・見学</h3>
+              <p>まずは事業所の雰囲気や作業内容を見ていただけます。ご本人だけでなく、ご家族や支援者の方からのご相談も可能です。</p>
+            </div>
+          </article>
+          <article>
+            <b>02</b>
+            <div>
+              <h3>面談・体験</h3>
+              <p>得意なこと、不安なこと、希望する働き方を一緒に確認します。実際の作業を体験しながら、自分に合う形を考えていきます。</p>
+            </div>
+          </article>
+          <article>
+            <b>03</b>
+            <div>
+              <h3>利用開始</h3>
+              <p>無理のないペースで、軽作業やIT業務に取り組みます。スタッフがそばで確認しながら、少しずつ経験を重ねていきます。</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="home-section home-faq" id="faq">
+        <div class="home-section__head">
+          <p class="home-kicker">Q&A</p>
+          <h2>よくあるご質問</h2>
+          <p class="home-section__lead">
+            見学や利用を考えている方、ご家族、支援者の方が気になりやすい内容をまとめました。
+          </p>
+        </div>
+        <div class="home-faq__list">
+          <details>
+            <summary>見学だけでもできますか？</summary>
+            <p>はい。事業所の雰囲気や作業内容を見てからご相談いただけます。</p>
+          </details>
+          <details>
+            <summary>家族や支援者と一緒に相談できますか？</summary>
+            <p>はい。ご本人だけでなく、ご家族や支援者の方からのご相談も可能です。</p>
+          </details>
+          <details>
+            <summary>パソコンが得意でなくても大丈夫ですか？</summary>
+            <p>大丈夫です。軽作業など、できることや得意なことに合わせて作業を一緒に考えます。</p>
+          </details>
+          <details>
+            <summary>どんな仕事がありますか？</summary>
+            <p>軽作業、Web制作、ページ更新、データ入力などがあります。内容は見学や相談の中で確認できます。</p>
+          </details>
+          <details>
+            <summary>企業から仕事の相談もできますか？</summary>
+            <p>はい。軽作業やIT業務について、内容が決まっていない段階でもご相談いただけます。</p>
+          </details>
+        </div>
+      </section>
+
+      <section class="home-contact" id="contact">
+        <div class="home-contact__inner">
+          <div>
+            <p class="home-kicker">Contact</p>
+            <h2>見学・相談から、お気軽にお問い合わせください。</h2>
+            <p>
+              まだ決めきれていない段階でも大丈夫です。
+              利用を考えている方、ご家族、支援者の方、仕事の依頼を検討している企業の方まで、
+              内容が決まっていない段階でもご相談いただけます。
+            </p>
+          </div>
+          <form class="home-contact__form" action="#" method="post">
+            <label>
+              <span>お問い合わせ種別</span>
+              <select name="type">
+                <option>見学・利用について</option>
+                <option>仕事の依頼について</option>
+                <option>その他</option>
+              </select>
+            </label>
+            <label>
+              <span>お名前</span>
+              <input type="text" name="name" placeholder="山田 太郎" />
+            </label>
+            <label>
+              <span>メールアドレス</span>
+              <input type="email" name="email" placeholder="example@example.com" />
+            </label>
+            <label>
+              <span>電話番号</span>
+              <input type="tel" name="tel" placeholder="090-0000-0000" />
+            </label>
+            <label class="home-contact__form-wide">
+              <span>お問い合わせ内容</span>
+              <textarea name="message" rows="5" placeholder="見学希望日やご相談内容をご入力ください。"></textarea>
+            </label>
+            <button type="submit">送信する</button>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="home-footer">
+      <small>&copy; LINKWORK. All Rights Reserved.</small>
+    </footer>
 
     <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
-    <script>AOS.init({ duration: 1200, once: true });</script>
   </body>
 </html>

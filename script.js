@@ -25,6 +25,17 @@ const io = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 
+const softRevealObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('is-visible');
+      softRevealObserver.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.18 });
+
+document.querySelectorAll('.js-soft-reveal').forEach(el => softRevealObserver.observe(el));
+
 // 自動無限スライダー
 const track = document.getElementById('sliderTrack');
 
