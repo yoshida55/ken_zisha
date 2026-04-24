@@ -2,6 +2,19 @@ window.addEventListener('load', () => {
   document.body.classList.add('loaded');
 });
 
+// ヘッダー：スクロールでロゴ非表示＋背景つき小型に
+(function () {
+  const header = document.querySelector('.header');
+  if (!header) return;
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 80) {
+      header.classList.add('header--scrolled');
+    } else {
+      header.classList.remove('header--scrolled');
+    }
+  }, { passive: true });
+})();
+
 // FV背景スライドショー（クロスフェード）
 const fvSlides = document.querySelectorAll('.fv-bg-slide');
 if (fvSlides.length > 0) {

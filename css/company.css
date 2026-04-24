@@ -1,0 +1,115 @@
+/* ============================================
+   company.css — 企業情報ページ固有スタイル
+   色変数は work.css の :root を共有
+   ============================================ */
+
+/* ── ページヒーロー ── */
+.company-hero {
+  padding: 12rem 4rem 8rem;
+  background: var(--bg);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.company-hero__inner {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.company-hero__title {
+  font-size: 4.8rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin: 1rem 0 2rem;
+  font-family: 'Shippori Mincho', serif;
+}
+
+.company-hero__lead {
+  font-size: 1.6rem;
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+/* ── 企業理念 ── */
+.company-philosophy__body {
+  max-width: 100rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3rem;
+}
+
+.company-philosophy__card {
+  background: var(--bg-card);
+  border-radius: 1.2rem;
+  padding: 4rem 3.2rem;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+}
+
+.company-philosophy__card h3 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 1rem 0 1.6rem;
+}
+
+.company-philosophy__card p {
+  font-size: 1.5rem;
+  color: var(--text-secondary);
+  line-height: 1.9;
+}
+
+/* ── 会社概要テーブル ── */
+.company-overview__table-wrap {
+  max-width: 80rem;
+  margin: 0 auto;
+}
+
+.company-overview__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1.5rem;
+}
+
+.company-overview__table th,
+.company-overview__table td {
+  padding: 2rem 2.4rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  text-align: left;
+  line-height: 1.7;
+}
+
+.company-overview__table th {
+  width: 20rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.company-overview__table td {
+  color: var(--text-primary);
+}
+
+/* ── レスポンシブ ── */
+@media screen and (max-width: 699.98px) {
+  .company-hero {
+    padding: 10rem 2.4rem 6rem;
+  }
+
+  .company-hero__title {
+    font-size: 3.2rem;
+  }
+
+  .company-philosophy__body {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .company-overview__table th {
+    width: 12rem;
+  }
+
+  .company-overview__table th,
+  .company-overview__table td {
+    padding: 1.6rem 1.6rem;
+  }
+}

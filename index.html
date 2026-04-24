@@ -16,13 +16,14 @@
     <header class="header">
       <div class="header-inner">
         <a href="index.html" class="logo" aria-label="株式会社リンクワーク トップページ">LINKWORK</a>
-        <nav class="nav" aria-label="メインナビゲーション">
-          <a href="#about" class="nav-link">私たちについて</a>
-          <a href="#service" class="nav-link">仕事の内容</a>
-          <a href="#works" class="nav-link">作業風景</a>
-          <a href="#flow" class="nav-link">利用までの流れ</a>
+        <div class="header-actions">
           <a href="#contact" class="nav-link nav-link--cta">お問い合わせ</a>
-        </nav>
+          <button class="hamburger" aria-label="メニューを開く">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -94,14 +95,10 @@
         <div class="home-about__grid">
           <div class="home-about__image js-soft-reveal">
             <img src="img/女性の就労支援員と就労者が相談している.png" alt="スタッフが相談しながら業務を進めている様子" />
-            <div class="home-about__badge">
-              <span>Work Support</span>
-              <b>軽作業 / IT業務 / 働く経験</b>
-            </div>
           </div>
           <div class="home-about__body">
             <p class="home-kicker js-soft-reveal">About us</p>
-            <h2 class="js-soft-reveal">安心して働ける場所から、丁寧な仕事を届ける。</h2>
+            <h2 class="js-soft-reveal">一人ひとりに合った、働く場所がここにあります。</h2>
             <p class="js-soft-reveal">
               私たちは、軽作業・IT業務を通じて、一人ひとりが自分のペースで働く経験を重ねられる就労継続支援事業所です。
               作業の内容や得意なことを確認しながら、無理のない形で仕事に取り組みます。
@@ -110,18 +107,6 @@
               同時に、企業からお預かりする業務にも誠実に向き合い、
               丁寧な作業、確認しやすい進行、継続しやすい関係づくりを大切にしています。
             </p>
-            <div class="home-about__cards" aria-label="私たちの2つの側面">
-              <article class="js-soft-reveal">
-                <span>利用を考えている方へ</span>
-                <strong>安心して経験を重ねる</strong>
-                <p>一人ひとりの得意やペースを大切にしながら、仕事につながる経験を積み重ねます。</p>
-              </article>
-              <article class="js-soft-reveal">
-                <span>仕事を依頼したい企業へ</span>
-                <strong>丁寧に仕事を届ける</strong>
-                <p>確認や報告を大切にし、企業からお預かりした業務に責任を持って取り組みます。</p>
-              </article>
-            </div>
           </div>
         </div>
       </section>
@@ -144,13 +129,6 @@
               <h3>軽作業</h3>
               <p>封入、検品、仕分け、梱包など、手を動かしながら取り組める仕事です。確認を重ねながら、一つひとつ丁寧に進めます。</p>
               <p class="home-service-feature__note">小ロットのご相談や、継続的な作業にも内容に合わせて対応します。</p>
-              <ul class="home-service-tags" aria-label="軽作業の対応内容">
-                <li>封入</li>
-                <li>検品</li>
-                <li>仕分け</li>
-                <li>梱包</li>
-                <li>組み立て</li>
-              </ul>
             </div>
           </article>
           <article class="home-service-feature home-service-feature--warm">
@@ -162,48 +140,32 @@
               <h3>IT業務</h3>
               <p>Web制作、ページ更新、データ入力、画像整理など、パソコンを使った仕事です。得意や関心に合わせて、少しずつ経験を広げていきます。</p>
               <p class="home-service-feature__note">作業手順を確認しながら、日々の更新作業や運用補助もご相談いただけます。</p>
-              <ul class="home-service-tags" aria-label="IT業務の対応内容">
-                <li>Web制作</li>
-                <li>更新作業</li>
-                <li>データ入力</li>
-                <li>画像整理</li>
-                <li>運用補助</li>
-              </ul>
             </div>
           </article>
-        </div>
-        <div class="home-service-note" aria-label="対応形式">
-          <span>見学・相談</span>
-          <span>軽作業</span>
-          <span>IT業務</span>
-          <span>企業からのご依頼</span>
         </div>
       </section>
 
       <section class="home-work" id="works">
         <div class="home-work__inner">
           <div class="home-work__text">
-            <p class="home-kicker">Work Scene</p>
-            <h2>安心して取り組める環境で、仕事に向き合っています。</h2>
-            <p>
+            <p class="home-kicker js-soft-reveal">Work Scene</p>
+            <h2 class="js-soft-reveal">安心して取り組める環境で、仕事に向き合っています。</h2>
+            <p class="js-soft-reveal">
               スタッフがそばで確認しながら、軽作業やIT業務に取り組める環境を整えています。
               働く人にとっての安心感と、企業にとっての任せやすさの両方を大切にしています。
             </p>
             <div class="home-work__points" aria-label="作業体制の特徴">
-              <article>
+              <article class="js-soft-reveal">
                 <span>Support</span>
                 <strong>そばで確認できる体制</strong>
-                <p>困ったときに相談しやすく、作業内容を確認しながら進められます。</p>
               </article>
-              <article>
+              <article class="js-soft-reveal">
                 <span>Work</span>
                 <strong>実際の仕事に取り組む</strong>
-                <p>軽作業やIT業務を通じて、働く経験を少しずつ積み重ねます。</p>
               </article>
-              <article>
+              <article class="js-soft-reveal">
                 <span>Quality</span>
                 <strong>丁寧さを大切にする</strong>
-                <p>企業からお預かりした仕事にも、確認と報告を大切にして取り組みます。</p>
               </article>
             </div>
           </div>
@@ -293,8 +255,9 @@
         <div class="home-contact__inner">
           <div>
             <p class="home-kicker">Contact</p>
-            <h2>見学・相談から、お気軽にお問い合わせください。</h2>
+            <h2>見学・相談から、お気軽にご相談ください。</h2>
             <p>
+              見学だけでも大丈夫です。
               まだ決めきれていない段階でも大丈夫です。
               利用を考えている方、ご家族、支援者の方、仕事の依頼を検討している企業の方まで、
               内容が決まっていない段階でもご相談いただけます。
@@ -332,7 +295,40 @@
     </main>
 
     <footer class="home-footer">
-      <small>&copy; LINKWORK. All Rights Reserved.</small>
+      <div class="home-footer__inner">
+        <div class="home-footer__brand">
+          <a href="index.html" class="home-footer__logo">LINKWORK</a>
+          <p>就労継続支援事業所</p>
+          <p>軽作業・IT業務を通じて、一人ひとりの働く経験を支えます。</p>
+        </div>
+        <div class="home-footer__info">
+          <h2>株式会社リンクワーク</h2>
+          <address>
+            〒000-0000<br />
+            〇〇県〇〇市〇〇町0-0-0<br />
+            TEL 000-0000-0000<br />
+            MAIL info@example.com
+          </address>
+        </div>
+        <nav class="home-footer__nav" aria-label="フッターナビゲーション">
+          <a href="#about">私たちについて</a>
+          <a href="#service">仕事の内容</a>
+          <a href="#works">作業風景</a>
+          <a href="#flow">利用までの流れ</a>
+          <a href="#faq">よくあるご質問</a>
+          <a href="#contact">お問い合わせ</a>
+        </nav>
+        <div class="home-footer__action">
+          <a href="#contact">見学・相談する</a>
+        </div>
+      </div>
+      <div class="home-footer__bottom">
+        <div>
+          <a href="#">プライバシーポリシー</a>
+          <a href="#">運営会社情報</a>
+        </div>
+        <small>&copy; LINKWORK. All Rights Reserved.</small>
+      </div>
     </footer>
 
     <script src="script.js"></script>
