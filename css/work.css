@@ -209,8 +209,8 @@ body.home-page {
   inset: 0;
   z-index: 1;
   background:
-    linear-gradient(90deg, rgba(12, 15, 18, 0.86) 0%, rgba(12, 15, 18, 0.56) 46%, rgba(12, 15, 18, 0.12) 100%),
-    linear-gradient(0deg, rgba(12, 15, 18, 0.72) 0%, rgba(12, 15, 18, 0) 46%);
+    linear-gradient(90deg, rgba(12, 15, 18, 0.7) 0%, rgba(12, 15, 18, 0.32) 46%, rgba(12, 15, 18, 0.08) 100%),
+    linear-gradient(0deg, rgba(12, 15, 18, 0.42) 0%, rgba(12, 15, 18, 0) 46%);
 }
 
 .home-hero__media {
@@ -322,7 +322,7 @@ body.home-page {
 .home-marker {
   display: inline;
   font-style: normal;
-  background-image: linear-gradient(to right, rgba(216, 111, 69, 0.34), rgba(216, 111, 69, 0.34));
+  background-image: linear-gradient(to right, rgba(216, 111, 69, 0.5), rgba(216, 111, 69, 0.5));
   background-repeat: no-repeat;
   background-size: 0% 0.28em;
   background-position: left 84%;

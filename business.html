@@ -9,63 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500;600;700;800&family=Noto+Sans+JP:wght@400;500;700;800&family=Shippori+Mincho:wght@500;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/reset.css" />
-    <link rel="stylesheet" href="css/business.css?v=hero-sweep-3" />
-    <style>
-      .business-hero__title-line {
-        position: relative;
-        display: inline-block;
-      }
-
-      .business-hero__title-line::after {
-        content: attr(data-text);
-        position: absolute;
-        inset: 0;
-        overflow: hidden;
-        color: transparent;
-        background: linear-gradient(90deg, #0a8fe8 0%, #1473ea 46%, #0a8fe8 100%);
-        background-size: 180% 100%;
-        background-clip: text;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-        clip-path: inset(0 100% 0 0);
-        animation: hero-title-direct-sweep 1.8s var(--line-delay, 0.8s) cubic-bezier(0.22, 1, 0.36, 1) forwards;
-        pointer-events: none;
-      }
-
-      @keyframes hero-title-direct-sweep {
-        0% {
-          clip-path: inset(0 100% 0 0);
-          background-position: 0% 50%;
-          opacity: 0;
-        }
-        12% {
-          opacity: 1;
-        }
-        52% {
-          clip-path: inset(0 0 0 0);
-          background-position: 100% 50%;
-          opacity: 1;
-        }
-        78% {
-          clip-path: inset(0 0 0 0);
-          opacity: 1;
-        }
-        100% {
-          clip-path: inset(0 0 0 0);
-          background-position: 100% 50%;
-          opacity: 1;
-        }
-      }
-
-      @media (prefers-reduced-motion: reduce) {
-        .business-hero__title-line::after {
-          display: block !important;
-          animation: hero-title-direct-sweep 1.8s var(--line-delay, 0.8s) cubic-bezier(0.22, 1, 0.36, 1) forwards !important;
-        }
-      }
-
-    </style>
+    <link rel="stylesheet" href="css/business.css" />
   </head>
   <body>
     <header class="site-header" data-header>
@@ -74,6 +18,7 @@
         <small>就労継続支援A型</small>
       </a>
       <nav class="site-nav" aria-label="事業内容ナビゲーション">
+        <a href="index.html">ホーム</a>
         <a href="#overview">事業の考え方</a>
         <a href="#light-work">軽作業</a>
         <a href="#digital-work">IT作業</a>
@@ -91,13 +36,12 @@
           <img src="img/女性の就労支援員と就労者が相談している(チャットGPT・横並び).png" alt="" />
         </div>
         <div class="business-hero__inner">
-          <p class="section-label section-label--light">Type A Employment Support</p>
-          <h1 class="business-hero__title" aria-label="働く経験を、社会につながる仕事へ。">
-            <span class="business-hero__title-line" aria-hidden="true" data-text="働く経験を、" style="--line-delay: 0.9s"> <span class="business-hero__title-char" style="--i: 0">働</span><span class="business-hero__title-char" style="--i: 1">く</span><span class="business-hero__title-char" style="--i: 2">経</span><span class="business-hero__title-char" style="--i: 3">験</span><span class="business-hero__title-char" style="--i: 4">を</span><span class="business-hero__title-char" style="--i: 5">、</span> </span>
-            <br aria-hidden="true" />
-            <span class="business-hero__title-line" aria-hidden="true" data-text="社会につながる仕事へ。" style="--line-delay: 1.18s"> <span class="business-hero__title-char" style="--i: 6">社</span><span class="business-hero__title-char" style="--i: 7">会</span><span class="business-hero__title-char" style="--i: 8">に</span><span class="business-hero__title-char" style="--i: 9">つ</span><span class="business-hero__title-char" style="--i: 10">な</span><span class="business-hero__title-char" style="--i: 11">が</span><span class="business-hero__title-char" style="--i: 12">る</span><span class="business-hero__title-char" style="--i: 13">仕</span><span class="business-hero__title-char" style="--i: 14">事</span><span class="business-hero__title-char" style="--i: 15">へ</span><span class="business-hero__title-char" style="--i: 16">。</span> </span>
+          <p class="section-label section-label--light">就労継続支援A型</p>
+          <h1 class="business-hero__title">
+            働く経験を、<br />
+            社会につながる<em class="business-marker">仕事</em>へ。
           </h1>
-          <p class="business-hero__lead"> 株式会社リンクワークは、就労継続支援A型事業所として、雇用契約のもとで働く機会を提供しています。 軽作業とIT作業を通じて、一人ひとりの得意やペースを確かめながら、実務に向き合う力を育てます。 </p>
+          <p class="business-hero__lead"> 株式会社リンクワークは、就労継続支援A型事業所です。雇用契約を結んで、自分のペースで働く経験を重ねていく場所です。軽作業とIT作業を通じて、得意なことや関心のあることを少しずつ広げていけます。 </p>
           <div class="business-hero__actions">
             <a href="#light-work" class="button button--primary">軽作業を見る</a>
             <a href="#digital-work" class="button button--outline">IT作業を見る</a>
@@ -125,14 +69,14 @@
       <section class="overview-section" id="overview" data-animate>
         <div class="overview-grid">
           <article>
-            <span>Support</span>
-            <h2>支援と仕事を切り離さない</h2>
-            <p> 体調、得意な作業、不安な工程を確認しながら、実際の仕事に取り組みます。 福祉としての安心感と、仕事としての責任感を両立させることを大切にしています。 </p>
+            <span>わたしたちの考え</span>
+            <h2>あなたのペースを大切に</h2>
+            <p> 体調や得意なこと、不安なことを一緒に確認しながら、無理なく仕事に取り組めるようにしています。安心して働ける場であることを大切にしています。 </p>
           </article>
           <article>
-            <span>Quality</span>
-            <h2>納品まで見据えて進める</h2>
-            <p> 企業からお預かりする業務は、手順化、担当分け、確認、納品までをスタッフが管理します。 はじめてのご依頼でも相談しやすい進行体制を整えています。 </p>
+            <span>しごとへの姿勢</span>
+            <h2>できあがるまで、一緒に</h2>
+            <p> 仕事は工程を分けて、スタッフが一緒に確認しながら進めます。はじめてのことでも安心して取り組めるよう、丁寧にサポートします。 </p>
           </article>
         </div>
 
@@ -183,14 +127,14 @@
               </figure>
             </div>
           </div>
-          <p class="overview-flow__message"> 作業、確認、相談がゆるやかにつながる。リンクワークの仕事は、日々の小さな積み重ねから生まれます。 </p>
+          <p class="overview-flow__message"> 作業、確認、相談がやさしくつながる。日々の小さな積み重ねが、わたしたちの仕事になっていきます。 </p>
         </div>
       </section>
 
       <section class="section service-section service-section--light" id="light-work" data-animate>
         <div class="section-head">
-          <p class="section-label">Light Work</p>
-          <h2>手順を確かめながら、丁寧に積み重ねる軽作業。</h2>
+          <p class="section-label">軽作業</p>
+          <h2>一つひとつ、丁寧に積み重ねていく軽作業。</h2>
           <p> 封入、シール貼り、検品、仕分け、梱包など、手を動かしながら進める仕事です。 作業を小さな工程に分け、確認しやすい形にして取り組みます。 </p>
         </div>
 
@@ -199,9 +143,9 @@
             <img src="img/軽作業風景_2.jpg" alt="軽作業に取り組む様子" />
           </figure>
           <div class="service-content">
-            <p class="service-number">01 / Light Work</p>
-            <h3>手で覚える仕事を、無理のない工程に。</h3>
-            <p> 決まった手順に沿って進める作業を中心に、集中しやすい環境と確認しやすい流れを整えています。 はじめての作業でも、スタッフが工程ごとに確認しながら進めます。 </p>
+            <p class="service-number">01 / 軽作業</p>
+            <h3>手を動かして覚える、無理のない仕事。</h3>
+            <p> はじめての作業でも、スタッフが一緒に工程ごとに確認しながら進めます。集中しやすい環境を整えています。 </p>
             <div class="task-grid">
               <article>
                 <span>封入・シール貼り</span>
@@ -225,10 +169,10 @@
       </section>
 
       <section class="section service-section service-section--digital" id="digital-work" data-animate>
-        <div class="section-head section-head--dark">
-          <p class="section-label section-label--light">Digital Work</p>
-          <h2>PCを使って、企業の運用を支えるIT作業。</h2>
-          <p> Web制作、ホームページ更新、WordPress運用、データ入力、画像整理など、画面上で進める仕事にも取り組んでいます。 手順書やチェックリストをもとに、担当できる工程を少しずつ広げます。 </p>
+        <div class="section-head">
+          <p class="section-label">IT作業</p>
+          <h2>パソコンで、できることを少しずつ広げる。</h2>
+          <p> Web制作やデータ入力など、画面の前で進める仕事にも取り組んでいます。手順書やチェックリストがあるので、はじめてでも安心です。 </p>
         </div>
 
         <div class="digital-layout">
@@ -236,29 +180,19 @@
             <video autoplay muted loop playsinline poster="img/トップ画面（ITより）.png">
               <source src="img/オフィスで話あっている動画.mp4" type="video/mp4" />
             </video>
-            <figcaption>Web / Update / Data</figcaption>
+            <figcaption>IT作業のようす</figcaption>
           </figure>
 
           <div class="digital-services">
             <article>
               <span>01</span>
-              <h3>Webサイト制作</h3>
-              <p>HTML/CSSのコーディング、画像差し替え、下層ページ制作などを行います。</p>
+              <h3>Web・ホームページ関連</h3>
+              <p>ホームページの更新、文章や画像の整理、WordPressでの記事投稿など、画面の前で進める作業に取り組みます。</p>
             </article>
             <article>
               <span>02</span>
-              <h3>ホームページ更新</h3>
-              <p>お知らせ更新、文章修正、画像整理など、日々の運用業務を支援します。</p>
-            </article>
-            <article>
-              <span>03</span>
-              <h3>WordPress運用</h3>
-              <p>記事投稿、カテゴリ整理、管理画面での編集作業などに対応します。</p>
-            </article>
-            <article>
-              <span>04</span>
               <h3>データ入力・整理</h3>
-              <p>入力、チェック、リスト整理など、正確さが求められる作業を進めます。</p>
+              <p>データの入力やチェック、リストの整理など、こつこつ正確に進める作業を担当します。</p>
             </article>
           </div>
         </div>
@@ -266,33 +200,33 @@
 
       <section class="section support-section" id="support" data-animate>
         <div class="section-head">
-          <p class="section-label">Support System</p>
-          <h2>利用者の安心と、企業の依頼しやすさを同じ仕組みで支えます。</h2>
-          <p> A型事業所としての支援と、業務を受ける事業者としての品質管理を分けずに考えます。 作業前の確認、作業中の見守り、納品前のチェックまで、スタッフが一緒に伴走します。 </p>
+          <p class="section-label">支援のしくみ</p>
+          <h2>安心して働けるよう、スタッフがそばで伴走します。</h2>
+          <p> 作業前の確認、作業中の見守り、仕上がりのチェックまで、スタッフが一緒に進めていきます。 </p>
         </div>
 
         <div class="support-grid">
           <article>
             <span>01</span>
-            <h3>作業を小さく分ける</h3>
+            <h3>小さな工程に分ける</h3>
             <p>内容を工程ごとに分け、担当しやすい形に整理します。迷いやすい部分は手順書や見本で確認します。</p>
           </article>
           <article>
             <span>02</span>
-            <h3>スタッフが進行を確認</h3>
+            <h3>そばで一緒に確認</h3>
             <p>作業量、体調、進み具合を見ながら、必要に応じて声かけや工程調整を行います。</p>
           </article>
           <article>
             <span>03</span>
-            <h3>納品前に品質を確認</h3>
-            <p>数量、内容、仕上がりを確認し、企業へお渡しする前にチェックを重ねます。</p>
+            <h3>仕上がりを丁寧に確認</h3>
+            <p>数量、内容、仕上がりを確認し、お渡しする前にチェックを重ねます。</p>
           </article>
         </div>
 
         <div class="partner-process" id="partner">
           <div>
-            <p class="section-label">For Partners</p>
-            <h3>企業からのご依頼も、内容整理からご相談いただけます。</h3>
+            <p class="section-label">企業のみなさまへ</p>
+            <h3>お仕事のご相談も、まずはお気軽にお声がけください。</h3>
           </div>
           <ol>
             <li>
@@ -318,9 +252,9 @@
       <section class="daily-section" id="daily" data-animate>
         <div class="daily-inner">
           <div class="daily-head">
-            <p class="daily-head__case">Aさんの一日の過ごし方（WEB制作業務の場合）</p>
-            <h2>1日の流れを整え、働くリズムをつくる。</h2>
-            <p> 体調確認から作業、休憩、振り返りまで、無理なく続けられる時間設計を大切にしています。 支援員と予定を共有しながら、作業内容やペースをその日の状態に合わせて整えます。 </p>
+            <p class="daily-head__case">Aさんの一日（WEB制作のお仕事）</p>
+            <h2>無理のないリズムで、毎日を過ごす。</h2>
+            <p> 体調にあわせてその日の予定を調整しながら、自分のペースで取り組めます。支援員と予定を共有して、休憩や振り返りの時間も大切にしています。 </p>
           </div>
 
           <ol class="daily-timeline" aria-label="WEB制作業務の一日の流れ">
@@ -407,9 +341,9 @@
       <section class="cta-section" data-animate>
         <div class="cta-inner">
           <div>
-            <p class="section-label section-label--light">Contact</p>
-            <h2>見学、利用相談、仕事の依頼までお気軽にご相談ください。</h2>
-            <p> 「まず雰囲気を見たい」「どんな仕事が合うか知りたい」「作業を依頼できるか確認したい」など、 内容が固まっていない段階でもご相談いただけます。 </p>
+            <p class="section-label section-label--light">お問い合わせ</p>
+            <h2>まずは見学から、お気軽にどうぞ。</h2>
+            <p> 「雰囲気を見てみたい」「自分に合う仕事を知りたい」など、どんな段階のご相談でも歓迎します。 </p>
           </div>
           <a class="button button--primary" href="index.html#contact">お問い合わせへ</a>
         </div>

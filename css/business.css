@@ -251,8 +251,8 @@ em {
   box-shadow: 0 3rem 7rem rgba(23, 27, 32, 0.16);
   --hero-media-opacity: 1;
   opacity: 0;
-  transform: translate3d(2.6rem, 1.8rem, 0) scale(0.97);
-  animation: hero-media-in 1.1s 0.18s var(--ease) forwards;
+  filter: blur(14px);
+  animation: hero-media-in 3s 0.2s var(--ease) forwards;
 }
 
 .business-hero__media img {
@@ -308,38 +308,20 @@ em {
   line-height: 1.06;
 }
 
-.business-hero__title-line {
-  position: relative;
-  display: inline-block;
-  white-space: nowrap;
+.business-marker {
+  display: inline;
+  font-style: normal;
+  background-image: linear-gradient(to right, rgba(216, 111, 69, 0.5), rgba(216, 111, 69, 0.5));
+  background-repeat: no-repeat;
+  background-size: 0% 0.28em;
+  background-position: left 84%;
+  animation: business-marker-draw 0.9s 1.1s var(--ease) forwards;
 }
 
-.business-hero__title-line::after {
-  content: attr(data-text);
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  overflow: hidden;
-  color: transparent;
-  background: linear-gradient(90deg, #0a8fe8 0%, #1473ea 46%, #0a8fe8 100%);
-  background-size: 180% 100%;
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-weight: 700;
-  clip-path: inset(0 100% 0 0);
-  animation: hero-title-line-fill 1.8s var(--line-delay) var(--ease) forwards;
-  pointer-events: none;
-}
-
-.business-hero__title-char {
-  display: inline-block;
-  color: var(--ink);
-  transform: translate3d(-0.16em, 0, 0);
-  animation:
-    hero-title-char-in 0.9s calc(0.56s + var(--i) * 0.045s) var(--ease) both,
-    hero-title-char-sweep 2.45s calc(1.25s + var(--i) * 0.075s) ease-in-out infinite;
-  will-change: color, transform, text-shadow;
+@keyframes business-marker-draw {
+  to {
+    background-size: 100% 0.28em;
+  }
 }
 
 .business-hero__lead {
@@ -504,81 +486,10 @@ em {
   }
 }
 
-@keyframes hero-title-char-in {
-  0% {
-    color: rgba(23, 27, 32, 0.28);
-    transform: translate3d(-0.16em, 0, 0);
-    text-shadow: none;
-  }
-  34% {
-    color: var(--green);
-    text-shadow: 0 0.08em 0.34em rgba(15, 111, 102, 0.2);
-  }
-  62% {
-    color: var(--copper);
-    text-shadow: 0 0.08em 0.34em rgba(216, 111, 69, 0.18);
-  }
-  100% {
-    color: var(--ink);
-    transform: translate3d(0, 0, 0);
-    text-shadow: none;
-  }
-}
-
-@keyframes hero-title-char-sweep {
-  0%,
-  100% {
-    color: var(--ink);
-    text-shadow: none;
-  }
-  16% {
-    color: #0a8fe8;
-    text-shadow: 0 0.08em 0.36em rgba(10, 143, 232, 0.22);
-  }
-  34% {
-    color: #1473ea;
-    text-shadow: 0 0.08em 0.34em rgba(20, 115, 234, 0.22);
-  }
-  54% {
-    color: #0a8fe8;
-    text-shadow: 0 0.08em 0.3em rgba(10, 143, 232, 0.18);
-  }
-  72% {
-    color: var(--ink);
-    text-shadow: none;
-  }
-}
-
-@keyframes hero-title-line-fill {
-  0% {
-    clip-path: inset(0 100% 0 0);
-    background-position: 0% 50%;
-    opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  46% {
-    clip-path: inset(0 0 0 0);
-    background-position: 100% 50%;
-    opacity: 1;
-  }
-  70% {
-    clip-path: inset(0 0 0 0);
-    background-position: 100% 50%;
-    opacity: 1;
-  }
-  100% {
-    clip-path: inset(0 0 0 0);
-    background-position: 100% 50%;
-    opacity: 1;
-  }
-}
-
 @keyframes hero-media-in {
   to {
     opacity: var(--hero-media-opacity);
-    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0);
   }
 }
 
@@ -950,24 +861,24 @@ em {
 
 .service-section--digital {
   background:
-    radial-gradient(circle at 82% 12%, rgba(15, 111, 102, 0.28), transparent 34rem),
-    linear-gradient(135deg, rgba(216, 111, 69, 0.13) 0%, transparent 38%),
-    var(--dark);
-  color: #fff;
+    radial-gradient(circle at 82% 12%, rgba(15, 111, 102, 0.06), transparent 34rem),
+    linear-gradient(135deg, rgba(216, 111, 69, 0.04) 0%, transparent 38%),
+    var(--paper);
+  color: var(--ink);
 }
 
 .digital-layout {
   display: grid;
   grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
   gap: clamp(3rem, 5vw, 6rem);
-  align-items: stretch;
+  align-items: start;
 }
 
 .digital-video {
   position: relative;
-  min-height: 52rem;
+  aspect-ratio: 4 / 3;
   overflow: hidden;
-  border: 1px solid var(--line-light);
+  border: 1px solid var(--line);
   border-radius: 3rem;
   background: #101418;
 }
@@ -998,15 +909,15 @@ em {
 
 .digital-services {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-columns: minmax(0, 1fr);
   gap: 1.4rem;
+  align-content: start;
 }
 
 .digital-services article {
-  min-height: 23.8rem;
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  border: 1px solid var(--line);
   border-radius: 2.2rem;
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.66);
   padding: 2.4rem;
   backdrop-filter: blur(12px);
   transition:
@@ -1016,13 +927,13 @@ em {
 }
 
 .digital-services article:hover {
-  border-color: rgba(255, 255, 255, 0.34);
-  background: rgba(15, 111, 102, 0.12);
+  border-color: rgba(15, 111, 102, 0.32);
+  background: var(--soft-green);
   transform: translateY(-3px);
 }
 
 .digital-services span {
-  color: #73c8bd;
+  color: var(--green);
   font-family: var(--font-en);
   font-size: 1.2rem;
   font-weight: 800;
@@ -1031,7 +942,7 @@ em {
 
 .digital-services h3 {
   margin-top: 1.4rem;
-  color: #fff;
+  color: var(--ink);
   font-size: 1.9rem;
   font-weight: 800;
   line-height: 1.45;
@@ -1039,7 +950,7 @@ em {
 
 .digital-services p {
   margin-top: 1rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
   font-size: 1.36rem;
   line-height: 1.9;
 }
@@ -1537,15 +1448,9 @@ em {
     animation: none !important;
   }
 
-  .business-hero__title-char {
-    color: var(--ink);
-    transform: none;
-    text-shadow: none;
+  .business-marker {
+    background-size: 100% 0.28em;
     animation: none !important;
-  }
-
-  .business-hero__title-line::after {
-    display: none;
   }
 
   .overview-flow__ribbons {
@@ -1696,10 +1601,6 @@ em {
     font-size: 4rem;
   }
 
-  .business-hero__title-line {
-    white-space: normal;
-  }
-
   .business-hero__lead {
     font-size: 1.52rem;
   }
@@ -1779,8 +1680,7 @@ em {
     margin-bottom: 3.8rem;
   }
 
-  .service-media,
-  .digital-video {
+  .service-media {
     min-height: 32rem;
   }
 
