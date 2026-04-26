@@ -483,9 +483,7 @@ em {
   margin-top: 0;
   border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 3rem;
-  background:
-    radial-gradient(circle at 18% 16%, rgba(22, 133, 64, 0.16), transparent 30rem),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(232, 246, 235, 0.82));
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(255, 255, 255, 0.82));
   box-shadow: 0 2.4rem 6rem rgba(23, 27, 32, 0.1);
   overflow: hidden;
   backdrop-filter: blur(14px);
@@ -783,12 +781,14 @@ em {
 
 .digital-layout {
   display: grid;
-  grid-template-columns: minmax(0, 0.92fr) minmax(0, 1.08fr);
+  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
   gap: clamp(3rem, 5vw, 6rem);
   align-items: start;
 }
 
 .digital-video {
+  grid-column: 2;
+  grid-row: 1;
   position: relative;
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -822,6 +822,8 @@ em {
 }
 
 .digital-services {
+  grid-column: 1;
+  grid-row: 1;
   display: grid;
   grid-template-columns: minmax(0, 1fr);
   gap: 1.4rem;
@@ -1376,6 +1378,12 @@ em {
   .digital-layout,
   .partner-process {
     grid-template-columns: 1fr;
+  }
+
+  .digital-services,
+  .digital-video {
+    grid-column: auto;
+    grid-row: auto;
   }
 
   .business-hero__media {
