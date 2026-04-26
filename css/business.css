@@ -10,6 +10,8 @@
   --line-light: rgba(255, 255, 255, 0.18);
   --green: #0f6f66;
   --green-dark: #0b5f58;
+  --flow-green: #168540;
+  --flow-green-dark: #0f6c30;
   --copper: #d86f45;
   --blue: #4d6475;
   --soft-green: #eef7f4;
@@ -519,7 +521,7 @@ em {
 .overview-section {
   width: min(var(--container), calc(100% - var(--gutter) * 2));
   margin: 0 auto;
-  padding: 10rem 0 8rem;
+  padding: 11rem 0;
 }
 
 .overview-grid {
@@ -564,31 +566,30 @@ em {
 
 .overview-flow {
   position: relative;
-  margin-top: 6.4rem;
+  margin-top: 0;
   border: 1px solid rgba(255, 255, 255, 0.58);
   border-radius: 3rem;
   background:
-    radial-gradient(circle at 18% 16%, rgba(15, 111, 102, 0.1), transparent 28rem),
-    linear-gradient(135deg, rgba(255, 255, 255, 0.58), rgba(238, 247, 244, 0.7));
+    radial-gradient(circle at 18% 16%, rgba(22, 133, 64, 0.16), transparent 30rem),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.62), rgba(232, 246, 235, 0.82));
   box-shadow: 0 2.4rem 6rem rgba(23, 27, 32, 0.1);
   overflow: hidden;
   backdrop-filter: blur(14px);
   padding: 3.2rem 0 4rem;
 }
 
-.overview-flow::before {
-  content: "Flow";
-  position: absolute;
-  right: 3rem;
-  bottom: 1.6rem;
-  color: rgba(23, 27, 32, 0.07);
-  font-family: var(--font-en);
-  font-size: clamp(8rem, 14vw, 16rem);
-  font-weight: 800;
-  letter-spacing: -0.02em;
-  line-height: 0.8;
-  pointer-events: none;
+.overview-flow__title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 2.4rem;
+  text-align: center;
+  font-family: var(--font-title);
+  font-size: clamp(2.2rem, 2.6vw, 2.8rem);
+  font-weight: 600;
+  color: var(--flow-green-dark);
+  letter-spacing: 0.04em;
 }
+
 
 .overview-flow__ribbons {
   position: absolute;
@@ -956,7 +957,10 @@ em {
 }
 
 .support-section {
-  background: var(--paper);
+  background:
+    radial-gradient(circle at 18% 20%, rgba(216, 111, 69, 0.08), transparent 36rem),
+    linear-gradient(135deg, rgba(216, 111, 69, 0.06) 0%, rgba(216, 111, 69, 0.02) 100%),
+    var(--paper);
 }
 
 .support-grid {
@@ -1075,26 +1079,11 @@ em {
 .daily-section {
   position: relative;
   background:
-    linear-gradient(90deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px),
-    var(--dark);
-  background-size: 6rem 6rem;
-  color: #fff;
+    radial-gradient(circle at 82% 12%, rgba(15, 111, 102, 0.06), transparent 34rem),
+    linear-gradient(135deg, rgba(216, 111, 69, 0.04) 0%, transparent 38%),
+    var(--paper);
+  color: var(--ink);
   overflow: hidden;
-}
-
-.daily-section::before {
-  content: "Daily";
-  position: absolute;
-  right: clamp(2rem, 5vw, 7rem);
-  top: 8rem;
-  color: rgba(255, 255, 255, 0.045);
-  font-family: var(--font-en);
-  font-size: clamp(9rem, 15vw, 18rem);
-  font-weight: 800;
-  letter-spacing: 0;
-  line-height: 0.8;
-  pointer-events: none;
 }
 
 .daily-inner {
@@ -1114,7 +1103,7 @@ em {
   display: inline-flex;
   align-items: center;
   gap: 0.8rem;
-  color: #f3d9a7;
+  color: var(--copper);
   font-size: 1.54rem;
   font-weight: 800;
   letter-spacing: 0.08em;
@@ -1130,7 +1119,7 @@ em {
 
 .daily-head h2 {
   margin-top: 1.7rem;
-  color: #fff;
+  color: var(--ink);
   font-family: var(--font-title);
   font-size: clamp(2.8rem, 4vw, 4.9rem);
   font-weight: 600;
@@ -1141,7 +1130,7 @@ em {
 .daily-head p:not(.daily-head__case) {
   max-width: 75rem;
   margin-top: 1.8rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
   font-size: 1.52rem;
   line-height: 2;
 }
@@ -1217,7 +1206,7 @@ em {
 
 .daily-item time {
   padding-top: 1.45rem;
-  color: rgba(255, 255, 255, 0.84);
+  color: var(--ink);
   font-family: var(--font-en);
   font-size: clamp(1.8rem, 2vw, 2.4rem);
   font-weight: 800;
@@ -1231,19 +1220,19 @@ em {
   grid-template-columns: minmax(20rem, 0.32fr) minmax(0, 1fr);
   min-height: 19rem;
   overflow: hidden;
-  border: 1px solid rgba(255, 255, 255, 0.07);
+  border: 1px solid var(--line);
   border-radius: 0.8rem;
-  background: rgba(255, 255, 255, 0.045);
-  box-shadow: 0 2rem 4.6rem rgba(0, 0, 0, 0.18);
+  background: rgba(255, 255, 255, 0.66);
+  box-shadow: 0 2rem 4.6rem rgba(23, 27, 32, 0.06);
 }
 
 .daily-card__media {
   min-height: 19rem;
-  background: #242629;
+  background: #eee;
 }
 
 .daily-card__media img {
-  filter: saturate(0.9) contrast(1.04) brightness(0.92);
+  filter: saturate(0.96) contrast(1.02);
 }
 
 .daily-card--arrival .daily-card__media img {
@@ -1271,7 +1260,7 @@ em {
 }
 
 .daily-card h3 {
-  color: #fff;
+  color: var(--ink);
   font-size: clamp(1.9rem, 2vw, 2.35rem);
   font-weight: 800;
   line-height: 1.45;
@@ -1279,21 +1268,21 @@ em {
 
 .daily-card p {
   margin-top: 1.6rem;
-  color: rgba(255, 255, 255, 0.72);
+  color: var(--muted);
   font-size: 1.45rem;
   line-height: 2;
 }
 
 .daily-memo {
   margin-top: 2rem;
-  border: 2px solid rgba(239, 154, 92, 0.92);
+  border: 2px solid rgba(216, 111, 69, 0.45);
   border-radius: 0.8rem;
   padding: 1.2rem 1.6rem 1.4rem;
   text-align: center;
 }
 
 .daily-memo strong {
-  color: #f3c193;
+  color: var(--copper);
   font-size: 1.36rem;
   font-weight: 800;
   letter-spacing: 0.03em;
@@ -1302,7 +1291,7 @@ em {
 
 .daily-memo p {
   margin-top: 0.5rem;
-  color: rgba(255, 255, 255, 0.78);
+  color: var(--muted);
   font-size: 1.32rem;
   line-height: 1.8;
 }
@@ -1315,7 +1304,7 @@ em {
 }
 
 .cta-section {
-  padding: 10rem var(--gutter);
+  padding: 11rem var(--gutter);
   background: var(--paper);
 }
 
@@ -1696,11 +1685,6 @@ em {
 
   .daily-inner {
     width: calc(100% - 3.6rem);
-  }
-
-  .daily-section::before {
-    top: 6rem;
-    font-size: 7.6rem;
   }
 
   .daily-head {

@@ -6,7 +6,9 @@
       "WebSearch",
       "mcp__image-gen__generate_image_dalle3",
       "mcp__image-gen__generate_image_gpt",
-      "Bash(start \"\" \"d:/02_作業/00_リンクワーク/HTML自動化/過去の課題２/60_自社HP/business.html\")"
+      "Bash(start \"\" \"d:/02_作業/00_リンクワーク/HTML自動化/過去の課題２/60_自社HP/business.html\")",
+      "WebFetch(domain:www.inouekabu.com)",
+      "Bash(start \"\" \"D:/02_作業/00_リンクワーク/HTML自動化/過去の課題２/60_自社HP/index.html\")"
     ]
   }
 }
