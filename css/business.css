@@ -34,10 +34,7 @@ html {
 body {
   min-width: 320px;
   overflow-x: hidden;
-  background:
-    linear-gradient(90deg, rgba(23, 27, 32, 0.04) 1px, transparent 1px),
-    linear-gradient(0deg, rgba(23, 27, 32, 0.04) 1px, transparent 1px),
-    var(--paper);
+  background: linear-gradient(90deg, rgba(23, 27, 32, 0.04) 1px, transparent 1px), linear-gradient(0deg, rgba(23, 27, 32, 0.04) 1px, transparent 1px), var(--paper);
   background-size: 7.2rem 7.2rem;
   color: var(--ink);
   font-family: var(--font-ja);
@@ -96,26 +93,16 @@ em {
 }
 
 .site-logo {
-  display: grid;
-  gap: 0.1rem;
-  min-width: 16rem;
+  display: inline-flex;
+  align-items: center;
+  width: clamp(13.2rem, 12vw, 17rem);
+  min-width: 0;
 }
 
-.site-logo span {
-  color: var(--ink);
-  font-family: var(--font-en);
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: 0.12em;
-  line-height: 1;
-}
-
-.site-logo small {
-  color: var(--green);
-  font-size: 1.05rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  opacity: 0.72;
+.site-logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .site-nav {
@@ -204,7 +191,7 @@ em {
 .business-hero {
   position: relative;
   min-height: 92svh;
-  padding: 19rem var(--gutter) 14rem;
+  padding: 16rem var(--gutter) 14rem;
   overflow: hidden;
   background: var(--paper);
   color: var(--ink);
@@ -215,7 +202,7 @@ em {
   position: absolute;
   inset: 0;
   z-index: 1;
-  background: linear-gradient(90deg, rgba(246, 242, 236, 0.96) 0%, rgba(246, 242, 236, 0.9) 48%, rgba(246, 242, 236, 0.52) 100%);
+  background: linear-gradient(90deg, rgba(246, 242, 236, 0.96) 0%, rgba(246, 242, 236, 0.74) 48%, rgba(246, 242, 236, 0.12) 100%);
   pointer-events: none;
 }
 
@@ -237,12 +224,12 @@ em {
 
 .business-hero__media {
   position: absolute;
-  top: 17rem;
+  top: 21rem;
   right: var(--gutter);
   bottom: auto;
   left: auto;
   z-index: 0;
-  width: min(48rem, 38vw);
+  width: min(54rem, 44vw);
   height: min(58rem, 58vh);
   overflow: hidden;
   border-radius: 3.2rem;
@@ -257,7 +244,7 @@ em {
 
 .business-hero__media img {
   object-position: center 38%;
-  filter: saturate(0.96) contrast(1.02) brightness(1.04);
+  filter: saturate(1.03) contrast(1.06) brightness(0.98);
   transform: scale(1.05);
   animation: hero-image-drift 12s 1.2s ease-in-out infinite alternate;
 }
@@ -335,8 +322,8 @@ em {
 .business-hero__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.2rem;
-  margin-top: 4rem;
+  gap: 3rem;
+  margin-top: 7rem;
 }
 
 .business-hero .section-label,
@@ -501,7 +488,6 @@ em {
   color: var(--flow-green-dark);
   letter-spacing: 0.04em;
 }
-
 
 .overview-flow__ribbons {
   position: absolute;
@@ -773,9 +759,7 @@ em {
 }
 
 .service-section--digital {
-  background:
-    linear-gradient(135deg, rgba(216, 111, 69, 0.04) 0%, transparent 38%),
-    var(--paper);
+  background: linear-gradient(135deg, rgba(216, 111, 69, 0.04) 0%, transparent 38%), var(--paper);
   color: var(--ink);
 }
 
@@ -872,10 +856,7 @@ em {
 }
 
 .support-section {
-  background:
-    radial-gradient(circle at 18% 20%, rgba(216, 111, 69, 0.08), transparent 36rem),
-    linear-gradient(135deg, rgba(216, 111, 69, 0.06) 0%, rgba(216, 111, 69, 0.02) 100%),
-    var(--paper);
+  background: radial-gradient(circle at 18% 20%, rgba(216, 111, 69, 0.08), transparent 36rem), linear-gradient(135deg, rgba(216, 111, 69, 0.06) 0%, rgba(216, 111, 69, 0.02) 100%), var(--paper);
 }
 
 .support-grid {
@@ -993,9 +974,7 @@ em {
 
 .daily-section {
   position: relative;
-  background:
-    linear-gradient(135deg, rgba(216, 111, 69, 0.04) 0%, transparent 38%),
-    var(--paper);
+  background: linear-gradient(135deg, rgba(216, 111, 69, 0.04) 0%, transparent 38%), var(--paper);
   color: var(--ink);
   overflow: hidden;
 }
@@ -1054,6 +1033,9 @@ em {
   display: grid;
   gap: 1.2rem;
   list-style: none;
+  --timeline-x: 8.4rem;
+  --timeline-line-width: 0.4rem;
+  --timeline-dot-size: 2.5rem;
 }
 
 .daily-timeline::before {
@@ -1061,8 +1043,8 @@ em {
   position: absolute;
   top: 2.8rem;
   bottom: 2.8rem;
-  left: 7.15rem;
-  width: 0.5rem;
+  left: calc(var(--timeline-x) - (var(--timeline-line-width) / 2));
+  width: var(--timeline-line-width);
   border-radius: 999px;
   background: linear-gradient(180deg, #d87843, #ef9a5c);
 }
@@ -1071,7 +1053,7 @@ em {
   position: relative;
   display: grid;
   grid-template-columns: 5.8rem minmax(0, 1fr);
-  gap: 3.8rem;
+  gap: 5rem;
   align-items: start;
   opacity: 0;
   transform: translate3d(0, 2.2rem, 0);
@@ -1108,11 +1090,11 @@ em {
 .daily-item::before {
   content: "";
   position: absolute;
-  top: 2.1rem;
-  left: 6.45rem;
+  top: 1.4rem;
+  left: calc(var(--timeline-x) - (var(--timeline-dot-size) / 2));
   z-index: 2;
-  width: 1.9rem;
-  height: 1.9rem;
+  width: var(--timeline-dot-size);
+  height: var(--timeline-dot-size);
   border-radius: 50%;
   background: #df824c;
   box-shadow: 0 0 0 0.7rem rgba(223, 130, 76, 0.12);
@@ -1230,11 +1212,7 @@ em {
   width: min(var(--container), 100%);
   margin: 0 auto;
   border-radius: 2.8rem;
-  background:
-    radial-gradient(circle at 88% 18%, rgba(15, 111, 102, 0.34), transparent 28rem),
-    radial-gradient(circle at 10% 120%, rgba(216, 111, 69, 0.18), transparent 28rem),
-    linear-gradient(115deg, rgba(23, 27, 32, 0.98), rgba(20, 34, 38, 0.98)),
-    var(--dark);
+  background: radial-gradient(circle at 88% 18%, rgba(15, 111, 102, 0.34), transparent 28rem), radial-gradient(circle at 10% 120%, rgba(216, 111, 69, 0.18), transparent 28rem), linear-gradient(115deg, rgba(23, 27, 32, 0.98), rgba(20, 34, 38, 0.98)), var(--dark);
   padding: clamp(3rem, 6vw, 6rem);
   color: #fff;
   overflow: hidden;
@@ -1446,11 +1424,7 @@ em {
   }
 
   .site-logo {
-    min-width: 0;
-  }
-
-  .site-logo small {
-    display: none;
+    width: 12rem;
   }
 
   .header-contact {
@@ -1602,25 +1576,28 @@ em {
 
   .daily-timeline {
     gap: 1rem;
+    --timeline-x: 6.05rem;
+    --timeline-line-width: 0.4rem;
+    --timeline-dot-size: 1.7rem;
   }
 
   .daily-timeline::before {
     top: 2.2rem;
     bottom: 2.2rem;
-    left: 5.05rem;
-    width: 0.4rem;
+    left: calc(var(--timeline-x) - (var(--timeline-line-width) / 2));
+    width: var(--timeline-line-width);
   }
 
   .daily-item {
-    grid-template-columns: 4.2rem minmax(0, 1fr);
-    gap: 2rem;
+    grid-template-columns: 4.9rem minmax(0, 1fr);
+    gap: 2.4rem;
   }
 
   .daily-item::before {
     top: 1.8rem;
-    left: 4.35rem;
-    width: 1.7rem;
-    height: 1.7rem;
+    left: calc(var(--timeline-x) - (var(--timeline-dot-size) / 2));
+    width: var(--timeline-dot-size);
+    height: var(--timeline-dot-size);
     box-shadow: 0 0 0 0.5rem rgba(223, 130, 76, 0.12);
   }
 

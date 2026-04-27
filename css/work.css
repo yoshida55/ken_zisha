@@ -65,11 +65,16 @@ a {
 }
 
 .logo {
-  font-family: var(--font-en);
-  font-weight: 700;
-  font-size: 1.2rem;
-  letter-spacing: 0.1em;
-  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  width: clamp(13.2rem, 12vw, 17rem);
+  min-width: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
 }
 
 .nav {
@@ -125,9 +130,7 @@ body.home-page {
 }
 
 .home-page .logo {
-  color: #fff;
-  font-size: 1.35rem;
-  letter-spacing: 0.12em;
+  width: clamp(13.2rem, 12vw, 17rem);
 }
 
 .header-actions {
