@@ -113,12 +113,6 @@ body.home-page {
   backdrop-filter: none;
 }
 
-.home-page .header.header--scrolled .logo {
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity 0.25s ease;
-}
-
 .home-page .logo {
   transition: opacity 0.25s ease;
 }
@@ -233,7 +227,7 @@ body.home-page {
 }
 
 .home-hero__slide--1 {
-  background-image: url("../img/トップ画面（ITより）.png");
+  background-image: url("../img/女性の就労支援員と就労者が相談している(チャットGPT版).png");
   animation-delay: 0s;
 }
 
